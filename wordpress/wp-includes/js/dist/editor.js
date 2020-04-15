@@ -1,88 +1,88 @@
 this["wp"] = this["wp"] || {}; this["wp"]["editor"] =
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/     // The module cache
+/******/     var installedModules = {};
 /******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
+/******/     // The require function
+/******/     function __webpack_require__(moduleId) {
 /******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
+/******/         // Check if module is in cache
+/******/         if(installedModules[moduleId]) {
+/******/             return installedModules[moduleId].exports;
+/******/         }
+/******/         // Create a new module (and put it into the cache)
+/******/         var module = installedModules[moduleId] = {
+/******/             i: moduleId,
+/******/             l: false,
+/******/             exports: {}
+/******/         };
 /******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/         // Execute the module function
+/******/         modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
+/******/         // Flag the module as loaded
+/******/         module.l = true;
 /******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/         // Return the exports of the module
+/******/         return module.exports;
+/******/     }
 /******/
 /******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 422);
+/******/     // expose the modules object (__webpack_modules__)
+/******/     __webpack_require__.m = modules;
+/******/
+/******/     // expose the module cache
+/******/     __webpack_require__.c = installedModules;
+/******/
+/******/     // define getter function for harmony exports
+/******/     __webpack_require__.d = function(exports, name, getter) {
+/******/         if(!__webpack_require__.o(exports, name)) {
+/******/             Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/         }
+/******/     };
+/******/
+/******/     // define __esModule on exports
+/******/     __webpack_require__.r = function(exports) {
+/******/         if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/             Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/         }
+/******/         Object.defineProperty(exports, '__esModule', { value: true });
+/******/     };
+/******/
+/******/     // create a fake namespace object
+/******/     // mode & 1: value is a module id, require it
+/******/     // mode & 2: merge all properties of value into the ns
+/******/     // mode & 4: return value when already ns object
+/******/     // mode & 8|1: behave like require
+/******/     __webpack_require__.t = function(value, mode) {
+/******/         if(mode & 1) value = __webpack_require__(value);
+/******/         if(mode & 8) return value;
+/******/         if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/         var ns = Object.create(null);
+/******/         __webpack_require__.r(ns);
+/******/         Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/         if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/         return ns;
+/******/     };
+/******/
+/******/     // getDefaultExport function for compatibility with non-harmony modules
+/******/     __webpack_require__.n = function(module) {
+/******/         var getter = module && module.__esModule ?
+/******/             function getDefault() { return module['default']; } :
+/******/             function getModuleExports() { return module; };
+/******/         __webpack_require__.d(getter, 'a', getter);
+/******/         return getter;
+/******/     };
+/******/
+/******/     // Object.prototype.hasOwnProperty.call
+/******/     __webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/     // __webpack_public_path__
+/******/     __webpack_require__.p = "";
+/******/
+/******/
+/******/     // Load entry module and return exports
+/******/     return __webpack_require__(__webpack_require__.s = 422);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -119,48 +119,48 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /* global define */
 
 (function () {
-	'use strict';
+    'use strict';
 
-	var hasOwn = {}.hasOwnProperty;
+    var hasOwn = {}.hasOwnProperty;
 
-	function classNames () {
-		var classes = [];
+    function classNames () {
+        var classes = [];
 
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
+        for (var i = 0; i < arguments.length; i++) {
+            var arg = arguments[i];
+            if (!arg) continue;
 
-			var argType = typeof arg;
+            var argType = typeof arg;
 
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
+            if (argType === 'string' || argType === 'number') {
+                classes.push(arg);
+            } else if (Array.isArray(arg) && arg.length) {
+                var inner = classNames.apply(null, arg);
+                if (inner) {
+                    classes.push(inner);
+                }
+            } else if (argType === 'object') {
+                for (var key in arg) {
+                    if (hasOwn.call(arg, key) && arg[key]) {
+                        classes.push(key);
+                    }
+                }
+            }
+        }
 
-		return classes.join(' ');
-	}
+        return classes.join(' ');
+    }
 
-	if ( true && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
+    if ( true && module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (true) {
+        // register as 'classnames', consistent with npm package name
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+            return classNames;
+        }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+                __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else {}
 }());
 
 
@@ -518,287 +518,287 @@ exports["default"] = TextareaAutosize;
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	autosize 4.0.2
-	license: MIT
-	http://www.jacklmoore.com/autosize
+    autosize 4.0.2
+    license: MIT
+    http://www.jacklmoore.com/autosize
 */
 (function (global, factory) {
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else { var mod; }
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+                __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+                (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+                __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else { var mod; }
 })(this, function (module, exports) {
-	'use strict';
+    'use strict';
 
-	var map = typeof Map === "function" ? new Map() : function () {
-		var keys = [];
-		var values = [];
+    var map = typeof Map === "function" ? new Map() : function () {
+        var keys = [];
+        var values = [];
 
-		return {
-			has: function has(key) {
-				return keys.indexOf(key) > -1;
-			},
-			get: function get(key) {
-				return values[keys.indexOf(key)];
-			},
-			set: function set(key, value) {
-				if (keys.indexOf(key) === -1) {
-					keys.push(key);
-					values.push(value);
-				}
-			},
-			delete: function _delete(key) {
-				var index = keys.indexOf(key);
-				if (index > -1) {
-					keys.splice(index, 1);
-					values.splice(index, 1);
-				}
-			}
-		};
-	}();
+        return {
+            has: function has(key) {
+                return keys.indexOf(key) > -1;
+            },
+            get: function get(key) {
+                return values[keys.indexOf(key)];
+            },
+            set: function set(key, value) {
+                if (keys.indexOf(key) === -1) {
+                    keys.push(key);
+                    values.push(value);
+                }
+            },
+            delete: function _delete(key) {
+                var index = keys.indexOf(key);
+                if (index > -1) {
+                    keys.splice(index, 1);
+                    values.splice(index, 1);
+                }
+            }
+        };
+    }();
 
-	var createEvent = function createEvent(name) {
-		return new Event(name, { bubbles: true });
-	};
-	try {
-		new Event('test');
-	} catch (e) {
-		// IE does not support `new Event()`
-		createEvent = function createEvent(name) {
-			var evt = document.createEvent('Event');
-			evt.initEvent(name, true, false);
-			return evt;
-		};
-	}
+    var createEvent = function createEvent(name) {
+        return new Event(name, { bubbles: true });
+    };
+    try {
+        new Event('test');
+    } catch (e) {
+        // IE does not support `new Event()`
+        createEvent = function createEvent(name) {
+            var evt = document.createEvent('Event');
+            evt.initEvent(name, true, false);
+            return evt;
+        };
+    }
 
-	function assign(ta) {
-		if (!ta || !ta.nodeName || ta.nodeName !== 'TEXTAREA' || map.has(ta)) return;
+    function assign(ta) {
+        if (!ta || !ta.nodeName || ta.nodeName !== 'TEXTAREA' || map.has(ta)) return;
 
-		var heightOffset = null;
-		var clientWidth = null;
-		var cachedHeight = null;
+        var heightOffset = null;
+        var clientWidth = null;
+        var cachedHeight = null;
 
-		function init() {
-			var style = window.getComputedStyle(ta, null);
+        function init() {
+            var style = window.getComputedStyle(ta, null);
 
-			if (style.resize === 'vertical') {
-				ta.style.resize = 'none';
-			} else if (style.resize === 'both') {
-				ta.style.resize = 'horizontal';
-			}
+            if (style.resize === 'vertical') {
+                ta.style.resize = 'none';
+            } else if (style.resize === 'both') {
+                ta.style.resize = 'horizontal';
+            }
 
-			if (style.boxSizing === 'content-box') {
-				heightOffset = -(parseFloat(style.paddingTop) + parseFloat(style.paddingBottom));
-			} else {
-				heightOffset = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
-			}
-			// Fix when a textarea is not on document body and heightOffset is Not a Number
-			if (isNaN(heightOffset)) {
-				heightOffset = 0;
-			}
+            if (style.boxSizing === 'content-box') {
+                heightOffset = -(parseFloat(style.paddingTop) + parseFloat(style.paddingBottom));
+            } else {
+                heightOffset = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+            }
+            // Fix when a textarea is not on document body and heightOffset is Not a Number
+            if (isNaN(heightOffset)) {
+                heightOffset = 0;
+            }
 
-			update();
-		}
+            update();
+        }
 
-		function changeOverflow(value) {
-			{
-				// Chrome/Safari-specific fix:
-				// When the textarea y-overflow is hidden, Chrome/Safari do not reflow the text to account for the space
-				// made available by removing the scrollbar. The following forces the necessary text reflow.
-				var width = ta.style.width;
-				ta.style.width = '0px';
-				// Force reflow:
-				/* jshint ignore:start */
-				ta.offsetWidth;
-				/* jshint ignore:end */
-				ta.style.width = width;
-			}
+        function changeOverflow(value) {
+            {
+                // Chrome/Safari-specific fix:
+                // When the textarea y-overflow is hidden, Chrome/Safari do not reflow the text to account for the space
+                // made available by removing the scrollbar. The following forces the necessary text reflow.
+                var width = ta.style.width;
+                ta.style.width = '0px';
+                // Force reflow:
+                /* jshint ignore:start */
+                ta.offsetWidth;
+                /* jshint ignore:end */
+                ta.style.width = width;
+            }
 
-			ta.style.overflowY = value;
-		}
+            ta.style.overflowY = value;
+        }
 
-		function getParentOverflows(el) {
-			var arr = [];
+        function getParentOverflows(el) {
+            var arr = [];
 
-			while (el && el.parentNode && el.parentNode instanceof Element) {
-				if (el.parentNode.scrollTop) {
-					arr.push({
-						node: el.parentNode,
-						scrollTop: el.parentNode.scrollTop
-					});
-				}
-				el = el.parentNode;
-			}
+            while (el && el.parentNode && el.parentNode instanceof Element) {
+                if (el.parentNode.scrollTop) {
+                    arr.push({
+                        node: el.parentNode,
+                        scrollTop: el.parentNode.scrollTop
+                    });
+                }
+                el = el.parentNode;
+            }
 
-			return arr;
-		}
+            return arr;
+        }
 
-		function resize() {
-			if (ta.scrollHeight === 0) {
-				// If the scrollHeight is 0, then the element probably has display:none or is detached from the DOM.
-				return;
-			}
+        function resize() {
+            if (ta.scrollHeight === 0) {
+                // If the scrollHeight is 0, then the element probably has display:none or is detached from the DOM.
+                return;
+            }
 
-			var overflows = getParentOverflows(ta);
-			var docTop = document.documentElement && document.documentElement.scrollTop; // Needed for Mobile IE (ticket #240)
+            var overflows = getParentOverflows(ta);
+            var docTop = document.documentElement && document.documentElement.scrollTop; // Needed for Mobile IE (ticket #240)
 
-			ta.style.height = '';
-			ta.style.height = ta.scrollHeight + heightOffset + 'px';
+            ta.style.height = '';
+            ta.style.height = ta.scrollHeight + heightOffset + 'px';
 
-			// used to check if an update is actually necessary on window.resize
-			clientWidth = ta.clientWidth;
+            // used to check if an update is actually necessary on window.resize
+            clientWidth = ta.clientWidth;
 
-			// prevents scroll-position jumping
-			overflows.forEach(function (el) {
-				el.node.scrollTop = el.scrollTop;
-			});
+            // prevents scroll-position jumping
+            overflows.forEach(function (el) {
+                el.node.scrollTop = el.scrollTop;
+            });
 
-			if (docTop) {
-				document.documentElement.scrollTop = docTop;
-			}
-		}
+            if (docTop) {
+                document.documentElement.scrollTop = docTop;
+            }
+        }
 
-		function update() {
-			resize();
+        function update() {
+            resize();
 
-			var styleHeight = Math.round(parseFloat(ta.style.height));
-			var computed = window.getComputedStyle(ta, null);
+            var styleHeight = Math.round(parseFloat(ta.style.height));
+            var computed = window.getComputedStyle(ta, null);
 
-			// Using offsetHeight as a replacement for computed.height in IE, because IE does not account use of border-box
-			var actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(computed.height)) : ta.offsetHeight;
+            // Using offsetHeight as a replacement for computed.height in IE, because IE does not account use of border-box
+            var actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(computed.height)) : ta.offsetHeight;
 
-			// The actual height not matching the style height (set via the resize method) indicates that 
-			// the max-height has been exceeded, in which case the overflow should be allowed.
-			if (actualHeight < styleHeight) {
-				if (computed.overflowY === 'hidden') {
-					changeOverflow('scroll');
-					resize();
-					actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(window.getComputedStyle(ta, null).height)) : ta.offsetHeight;
-				}
-			} else {
-				// Normally keep overflow set to hidden, to avoid flash of scrollbar as the textarea expands.
-				if (computed.overflowY !== 'hidden') {
-					changeOverflow('hidden');
-					resize();
-					actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(window.getComputedStyle(ta, null).height)) : ta.offsetHeight;
-				}
-			}
+            // The actual height not matching the style height (set via the resize method) indicates that
+            // the max-height has been exceeded, in which case the overflow should be allowed.
+            if (actualHeight < styleHeight) {
+                if (computed.overflowY === 'hidden') {
+                    changeOverflow('scroll');
+                    resize();
+                    actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(window.getComputedStyle(ta, null).height)) : ta.offsetHeight;
+                }
+            } else {
+                // Normally keep overflow set to hidden, to avoid flash of scrollbar as the textarea expands.
+                if (computed.overflowY !== 'hidden') {
+                    changeOverflow('hidden');
+                    resize();
+                    actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(window.getComputedStyle(ta, null).height)) : ta.offsetHeight;
+                }
+            }
 
-			if (cachedHeight !== actualHeight) {
-				cachedHeight = actualHeight;
-				var evt = createEvent('autosize:resized');
-				try {
-					ta.dispatchEvent(evt);
-				} catch (err) {
-					// Firefox will throw an error on dispatchEvent for a detached element
-					// https://bugzilla.mozilla.org/show_bug.cgi?id=889376
-				}
-			}
-		}
+            if (cachedHeight !== actualHeight) {
+                cachedHeight = actualHeight;
+                var evt = createEvent('autosize:resized');
+                try {
+                    ta.dispatchEvent(evt);
+                } catch (err) {
+                    // Firefox will throw an error on dispatchEvent for a detached element
+                    // https://bugzilla.mozilla.org/show_bug.cgi?id=889376
+                }
+            }
+        }
 
-		var pageResize = function pageResize() {
-			if (ta.clientWidth !== clientWidth) {
-				update();
-			}
-		};
+        var pageResize = function pageResize() {
+            if (ta.clientWidth !== clientWidth) {
+                update();
+            }
+        };
 
-		var destroy = function (style) {
-			window.removeEventListener('resize', pageResize, false);
-			ta.removeEventListener('input', update, false);
-			ta.removeEventListener('keyup', update, false);
-			ta.removeEventListener('autosize:destroy', destroy, false);
-			ta.removeEventListener('autosize:update', update, false);
+        var destroy = function (style) {
+            window.removeEventListener('resize', pageResize, false);
+            ta.removeEventListener('input', update, false);
+            ta.removeEventListener('keyup', update, false);
+            ta.removeEventListener('autosize:destroy', destroy, false);
+            ta.removeEventListener('autosize:update', update, false);
 
-			Object.keys(style).forEach(function (key) {
-				ta.style[key] = style[key];
-			});
+            Object.keys(style).forEach(function (key) {
+                ta.style[key] = style[key];
+            });
 
-			map.delete(ta);
-		}.bind(ta, {
-			height: ta.style.height,
-			resize: ta.style.resize,
-			overflowY: ta.style.overflowY,
-			overflowX: ta.style.overflowX,
-			wordWrap: ta.style.wordWrap
-		});
+            map.delete(ta);
+        }.bind(ta, {
+            height: ta.style.height,
+            resize: ta.style.resize,
+            overflowY: ta.style.overflowY,
+            overflowX: ta.style.overflowX,
+            wordWrap: ta.style.wordWrap
+        });
 
-		ta.addEventListener('autosize:destroy', destroy, false);
+        ta.addEventListener('autosize:destroy', destroy, false);
 
-		// IE9 does not fire onpropertychange or oninput for deletions,
-		// so binding to onkeyup to catch most of those events.
-		// There is no way that I know of to detect something like 'cut' in IE9.
-		if ('onpropertychange' in ta && 'oninput' in ta) {
-			ta.addEventListener('keyup', update, false);
-		}
+        // IE9 does not fire onpropertychange or oninput for deletions,
+        // so binding to onkeyup to catch most of those events.
+        // There is no way that I know of to detect something like 'cut' in IE9.
+        if ('onpropertychange' in ta && 'oninput' in ta) {
+            ta.addEventListener('keyup', update, false);
+        }
 
-		window.addEventListener('resize', pageResize, false);
-		ta.addEventListener('input', update, false);
-		ta.addEventListener('autosize:update', update, false);
-		ta.style.overflowX = 'hidden';
-		ta.style.wordWrap = 'break-word';
+        window.addEventListener('resize', pageResize, false);
+        ta.addEventListener('input', update, false);
+        ta.addEventListener('autosize:update', update, false);
+        ta.style.overflowX = 'hidden';
+        ta.style.wordWrap = 'break-word';
 
-		map.set(ta, {
-			destroy: destroy,
-			update: update
-		});
+        map.set(ta, {
+            destroy: destroy,
+            update: update
+        });
 
-		init();
-	}
+        init();
+    }
 
-	function destroy(ta) {
-		var methods = map.get(ta);
-		if (methods) {
-			methods.destroy();
-		}
-	}
+    function destroy(ta) {
+        var methods = map.get(ta);
+        if (methods) {
+            methods.destroy();
+        }
+    }
 
-	function update(ta) {
-		var methods = map.get(ta);
-		if (methods) {
-			methods.update();
-		}
-	}
+    function update(ta) {
+        var methods = map.get(ta);
+        if (methods) {
+            methods.update();
+        }
+    }
 
-	var autosize = null;
+    var autosize = null;
 
-	// Do nothing in Node.js environment and IE8 (or lower)
-	if (typeof window === 'undefined' || typeof window.getComputedStyle !== 'function') {
-		autosize = function autosize(el) {
-			return el;
-		};
-		autosize.destroy = function (el) {
-			return el;
-		};
-		autosize.update = function (el) {
-			return el;
-		};
-	} else {
-		autosize = function autosize(el, options) {
-			if (el) {
-				Array.prototype.forEach.call(el.length ? el : [el], function (x) {
-					return assign(x, options);
-				});
-			}
-			return el;
-		};
-		autosize.destroy = function (el) {
-			if (el) {
-				Array.prototype.forEach.call(el.length ? el : [el], destroy);
-			}
-			return el;
-		};
-		autosize.update = function (el) {
-			if (el) {
-				Array.prototype.forEach.call(el.length ? el : [el], update);
-			}
-			return el;
-		};
-	}
+    // Do nothing in Node.js environment and IE8 (or lower)
+    if (typeof window === 'undefined' || typeof window.getComputedStyle !== 'function') {
+        autosize = function autosize(el) {
+            return el;
+        };
+        autosize.destroy = function (el) {
+            return el;
+        };
+        autosize.update = function (el) {
+            return el;
+        };
+    } else {
+        autosize = function autosize(el, options) {
+            if (el) {
+                Array.prototype.forEach.call(el.length ? el : [el], function (x) {
+                    return assign(x, options);
+                });
+            }
+            return el;
+        };
+        autosize.destroy = function (el) {
+            if (el) {
+                Array.prototype.forEach.call(el.length ? el : [el], destroy);
+            }
+            return el;
+        };
+        autosize.update = function (el) {
+            if (el) {
+                Array.prototype.forEach.call(el.length ? el : [el], update);
+            }
+            return el;
+        };
+    }
 
-	exports.default = autosize;
-	module.exports = exports['default'];
+    exports.default = autosize;
+    module.exports = exports['default'];
 });
 
 /***/ }),
@@ -1409,7 +1409,7 @@ hasWeakMap = typeof WeakMap !== 'undefined';
  * @return {Array} Value returned as entry in array.
  */
 function arrayOf( value ) {
-	return [ value ];
+    return [ value ];
 }
 
 /**
@@ -1421,7 +1421,7 @@ function arrayOf( value ) {
  * @return {boolean} Whether value is object-like.
  */
 function isObjectLike( value ) {
-	return !! value && 'object' === typeof value;
+    return !! value && 'object' === typeof value;
 }
 
 /**
@@ -1430,13 +1430,13 @@ function isObjectLike( value ) {
  * @return {Object} Cache object.
  */
 function createCache() {
-	var cache = {
-		clear: function() {
-			cache.head = null;
-		},
-	};
+    var cache = {
+        clear: function() {
+            cache.head = null;
+        },
+    };
 
-	return cache;
+    return cache;
 }
 
 /**
@@ -1450,19 +1450,19 @@ function createCache() {
  * @return {boolean} Whether arrays are shallowly equal.
  */
 function isShallowEqual( a, b, fromIndex ) {
-	var i;
+    var i;
 
-	if ( a.length !== b.length ) {
-		return false;
-	}
+    if ( a.length !== b.length ) {
+        return false;
+    }
 
-	for ( i = fromIndex; i < a.length; i++ ) {
-		if ( a[ i ] !== b[ i ] ) {
-			return false;
-		}
-	}
+    for ( i = fromIndex; i < a.length; i++ ) {
+        if ( a[ i ] !== b[ i ] ) {
+            return false;
+        }
+    }
 
-	return true;
+    return true;
 }
 
 /**
@@ -1481,181 +1481,181 @@ function isShallowEqual( a, b, fromIndex ) {
  * @return {Function} Memoized selector.
  */
 /* harmony default export */ __webpack_exports__["a"] = (function( selector, getDependants ) {
-	var rootCache, getCache;
+    var rootCache, getCache;
 
-	// Use object source as dependant if getter not provided
-	if ( ! getDependants ) {
-		getDependants = arrayOf;
-	}
+    // Use object source as dependant if getter not provided
+    if ( ! getDependants ) {
+        getDependants = arrayOf;
+    }
 
-	/**
-	 * Returns the root cache. If WeakMap is supported, this is assigned to the
-	 * root WeakMap cache set, otherwise it is a shared instance of the default
-	 * cache object.
-	 *
-	 * @return {(WeakMap|Object)} Root cache object.
-	 */
-	function getRootCache() {
-		return rootCache;
-	}
+    /**
+     * Returns the root cache. If WeakMap is supported, this is assigned to the
+     * root WeakMap cache set, otherwise it is a shared instance of the default
+     * cache object.
+     *
+     * @return {(WeakMap|Object)} Root cache object.
+     */
+    function getRootCache() {
+        return rootCache;
+    }
 
-	/**
-	 * Returns the cache for a given dependants array. When possible, a WeakMap
-	 * will be used to create a unique cache for each set of dependants. This
-	 * is feasible due to the nature of WeakMap in allowing garbage collection
-	 * to occur on entries where the key object is no longer referenced. Since
-	 * WeakMap requires the key to be an object, this is only possible when the
-	 * dependant is object-like. The root cache is created as a hierarchy where
-	 * each top-level key is the first entry in a dependants set, the value a
-	 * WeakMap where each key is the next dependant, and so on. This continues
-	 * so long as the dependants are object-like. If no dependants are object-
-	 * like, then the cache is shared across all invocations.
-	 *
-	 * @see isObjectLike
-	 *
-	 * @param {Array} dependants Selector dependants.
-	 *
-	 * @return {Object} Cache object.
-	 */
-	function getWeakMapCache( dependants ) {
-		var caches = rootCache,
-			isUniqueByDependants = true,
-			i, dependant, map, cache;
+    /**
+     * Returns the cache for a given dependants array. When possible, a WeakMap
+     * will be used to create a unique cache for each set of dependants. This
+     * is feasible due to the nature of WeakMap in allowing garbage collection
+     * to occur on entries where the key object is no longer referenced. Since
+     * WeakMap requires the key to be an object, this is only possible when the
+     * dependant is object-like. The root cache is created as a hierarchy where
+     * each top-level key is the first entry in a dependants set, the value a
+     * WeakMap where each key is the next dependant, and so on. This continues
+     * so long as the dependants are object-like. If no dependants are object-
+     * like, then the cache is shared across all invocations.
+     *
+     * @see isObjectLike
+     *
+     * @param {Array} dependants Selector dependants.
+     *
+     * @return {Object} Cache object.
+     */
+    function getWeakMapCache( dependants ) {
+        var caches = rootCache,
+            isUniqueByDependants = true,
+            i, dependant, map, cache;
 
-		for ( i = 0; i < dependants.length; i++ ) {
-			dependant = dependants[ i ];
+        for ( i = 0; i < dependants.length; i++ ) {
+            dependant = dependants[ i ];
 
-			// Can only compose WeakMap from object-like key.
-			if ( ! isObjectLike( dependant ) ) {
-				isUniqueByDependants = false;
-				break;
-			}
+            // Can only compose WeakMap from object-like key.
+            if ( ! isObjectLike( dependant ) ) {
+                isUniqueByDependants = false;
+                break;
+            }
 
-			// Does current segment of cache already have a WeakMap?
-			if ( caches.has( dependant ) ) {
-				// Traverse into nested WeakMap.
-				caches = caches.get( dependant );
-			} else {
-				// Create, set, and traverse into a new one.
-				map = new WeakMap();
-				caches.set( dependant, map );
-				caches = map;
-			}
-		}
+            // Does current segment of cache already have a WeakMap?
+            if ( caches.has( dependant ) ) {
+                // Traverse into nested WeakMap.
+                caches = caches.get( dependant );
+            } else {
+                // Create, set, and traverse into a new one.
+                map = new WeakMap();
+                caches.set( dependant, map );
+                caches = map;
+            }
+        }
 
-		// We use an arbitrary (but consistent) object as key for the last item
-		// in the WeakMap to serve as our running cache.
-		if ( ! caches.has( LEAF_KEY ) ) {
-			cache = createCache();
-			cache.isUniqueByDependants = isUniqueByDependants;
-			caches.set( LEAF_KEY, cache );
-		}
+        // We use an arbitrary (but consistent) object as key for the last item
+        // in the WeakMap to serve as our running cache.
+        if ( ! caches.has( LEAF_KEY ) ) {
+            cache = createCache();
+            cache.isUniqueByDependants = isUniqueByDependants;
+            caches.set( LEAF_KEY, cache );
+        }
 
-		return caches.get( LEAF_KEY );
-	}
+        return caches.get( LEAF_KEY );
+    }
 
-	// Assign cache handler by availability of WeakMap
-	getCache = hasWeakMap ? getWeakMapCache : getRootCache;
+    // Assign cache handler by availability of WeakMap
+    getCache = hasWeakMap ? getWeakMapCache : getRootCache;
 
-	/**
-	 * Resets root memoization cache.
-	 */
-	function clear() {
-		rootCache = hasWeakMap ? new WeakMap() : createCache();
-	}
+    /**
+     * Resets root memoization cache.
+     */
+    function clear() {
+        rootCache = hasWeakMap ? new WeakMap() : createCache();
+    }
 
-	// eslint-disable-next-line jsdoc/check-param-names
-	/**
-	 * The augmented selector call, considering first whether dependants have
-	 * changed before passing it to underlying memoize function.
-	 *
-	 * @param {Object} source    Source object for derivation.
-	 * @param {...*}   extraArgs Additional arguments to pass to selector.
-	 *
-	 * @return {*} Selector result.
-	 */
-	function callSelector( /* source, ...extraArgs */ ) {
-		var len = arguments.length,
-			cache, node, i, args, dependants;
+    // eslint-disable-next-line jsdoc/check-param-names
+    /**
+     * The augmented selector call, considering first whether dependants have
+     * changed before passing it to underlying memoize function.
+     *
+     * @param {Object} source    Source object for derivation.
+     * @param {...*}   extraArgs Additional arguments to pass to selector.
+     *
+     * @return {*} Selector result.
+     */
+    function callSelector( /* source, ...extraArgs */ ) {
+        var len = arguments.length,
+            cache, node, i, args, dependants;
 
-		// Create copy of arguments (avoid leaking deoptimization).
-		args = new Array( len );
-		for ( i = 0; i < len; i++ ) {
-			args[ i ] = arguments[ i ];
-		}
+        // Create copy of arguments (avoid leaking deoptimization).
+        args = new Array( len );
+        for ( i = 0; i < len; i++ ) {
+            args[ i ] = arguments[ i ];
+        }
 
-		dependants = getDependants.apply( null, args );
-		cache = getCache( dependants );
+        dependants = getDependants.apply( null, args );
+        cache = getCache( dependants );
 
-		// If not guaranteed uniqueness by dependants (primitive type or lack
-		// of WeakMap support), shallow compare against last dependants and, if
-		// references have changed, destroy cache to recalculate result.
-		if ( ! cache.isUniqueByDependants ) {
-			if ( cache.lastDependants && ! isShallowEqual( dependants, cache.lastDependants, 0 ) ) {
-				cache.clear();
-			}
+        // If not guaranteed uniqueness by dependants (primitive type or lack
+        // of WeakMap support), shallow compare against last dependants and, if
+        // references have changed, destroy cache to recalculate result.
+        if ( ! cache.isUniqueByDependants ) {
+            if ( cache.lastDependants && ! isShallowEqual( dependants, cache.lastDependants, 0 ) ) {
+                cache.clear();
+            }
 
-			cache.lastDependants = dependants;
-		}
+            cache.lastDependants = dependants;
+        }
 
-		node = cache.head;
-		while ( node ) {
-			// Check whether node arguments match arguments
-			if ( ! isShallowEqual( node.args, args, 1 ) ) {
-				node = node.next;
-				continue;
-			}
+        node = cache.head;
+        while ( node ) {
+            // Check whether node arguments match arguments
+            if ( ! isShallowEqual( node.args, args, 1 ) ) {
+                node = node.next;
+                continue;
+            }
 
-			// At this point we can assume we've found a match
+            // At this point we can assume we've found a match
 
-			// Surface matched node to head if not already
-			if ( node !== cache.head ) {
-				// Adjust siblings to point to each other.
-				node.prev.next = node.next;
-				if ( node.next ) {
-					node.next.prev = node.prev;
-				}
+            // Surface matched node to head if not already
+            if ( node !== cache.head ) {
+                // Adjust siblings to point to each other.
+                node.prev.next = node.next;
+                if ( node.next ) {
+                    node.next.prev = node.prev;
+                }
 
-				node.next = cache.head;
-				node.prev = null;
-				cache.head.prev = node;
-				cache.head = node;
-			}
+                node.next = cache.head;
+                node.prev = null;
+                cache.head.prev = node;
+                cache.head = node;
+            }
 
-			// Return immediately
-			return node.val;
-		}
+            // Return immediately
+            return node.val;
+        }
 
-		// No cached value found. Continue to insertion phase:
+        // No cached value found. Continue to insertion phase:
 
-		node = {
-			// Generate the result from original function
-			val: selector.apply( null, args ),
-		};
+        node = {
+            // Generate the result from original function
+            val: selector.apply( null, args ),
+        };
 
-		// Avoid including the source object in the cache.
-		args[ 0 ] = null;
-		node.args = args;
+        // Avoid including the source object in the cache.
+        args[ 0 ] = null;
+        node.args = args;
 
-		// Don't need to check whether node is already head, since it would
-		// have been returned above already if it was
+        // Don't need to check whether node is already head, since it would
+        // have been returned above already if it was
 
-		// Shift existing head down list
-		if ( cache.head ) {
-			cache.head.prev = node;
-			node.next = cache.head;
-		}
+        // Shift existing head down list
+        if ( cache.head ) {
+            cache.head.prev = node;
+            node.next = cache.head;
+        }
 
-		cache.head = node;
+        cache.head = node;
 
-		return node.val;
-	}
+        return node.val;
+    }
 
-	callSelector.getDependants = getDependants;
-	callSelector.clear = clear;
-	clear();
+    callSelector.getDependants = getDependants;
+    callSelector.clear = clear;
+    clear();
 
-	return callSelector;
+    return callSelector;
 });
 
 
@@ -2908,7 +2908,7 @@ function resetPost(post) {
  * post has been received, by initialization or autosave.
  *
  * @deprecated since 5.6. Callers should use the `receiveAutosaves( postId, autosave )`
- * 			   selector from the '@wordpress/core-data' package.
+ *                selector from the '@wordpress/core-data' package.
  *
  * @param {Object} newAutosave Autosave post object.
  *
@@ -3597,30 +3597,30 @@ function disablePublishSidebar() {
  * // Only allow publishing posts that are set to a future date.
  * if ( 'publish' !== initialPostStatus ) {
  *
- * 	// Track locking.
- * 	let locked = false;
+ *     // Track locking.
+ *     let locked = false;
  *
- * 	// Watch for the publish event.
- * 	let unssubscribe = subscribe( () => {
- * 		const currentPostStatus = wp.data.select( 'core/editor' ).getEditedPostAttribute( 'status' );
- * 		if ( 'publish' !== currentPostStatus ) {
+ *     // Watch for the publish event.
+ *     let unssubscribe = subscribe( () => {
+ *         const currentPostStatus = wp.data.select( 'core/editor' ).getEditedPostAttribute( 'status' );
+ *         if ( 'publish' !== currentPostStatus ) {
  *
- * 			// Compare the post date to the current date, lock the post if the date isn't in the future.
- * 			const postDate = new Date( wp.data.select( 'core/editor' ).getEditedPostAttribute( 'date' ) );
- * 			const currentDate = new Date();
- * 			if ( postDate.getTime() <= currentDate.getTime() ) {
- * 				if ( ! locked ) {
- * 					locked = true;
- * 					wp.data.dispatch( 'core/editor' ).lockPostSaving( 'futurelock' );
- * 				}
- * 			} else {
- * 				if ( locked ) {
- * 					locked = false;
- * 					wp.data.dispatch( 'core/editor' ).unlockPostSaving( 'futurelock' );
- * 				}
- * 			}
- * 		}
- * 	} );
+ *             // Compare the post date to the current date, lock the post if the date isn't in the future.
+ *             const postDate = new Date( wp.data.select( 'core/editor' ).getEditedPostAttribute( 'date' ) );
+ *             const currentDate = new Date();
+ *             if ( postDate.getTime() <= currentDate.getTime() ) {
+ *                 if ( ! locked ) {
+ *                     locked = true;
+ *                     wp.data.dispatch( 'core/editor' ).lockPostSaving( 'futurelock' );
+ *                 }
+ *             } else {
+ *                 if ( locked ) {
+ *                     locked = false;
+ *                     wp.data.dispatch( 'core/editor' ).unlockPostSaving( 'futurelock' );
+ *                 }
+ *             }
+ *         }
+ *     } );
  * }
  * ```
  *
@@ -4394,8 +4394,8 @@ function selectors_getEditedPostAttribute(state, attributeName) {
  * null if there is no autosave for the post.
  *
  * @deprecated since 5.6. Callers should use the `getAutosave( postType, postId, userId )` selector
- * 			   from the '@wordpress/core-data' package and access properties on the returned
- * 			   autosave object using getPostRawValue.
+ *                from the '@wordpress/core-data' package and access properties on the returned
+ *                autosave object using getPostRawValue.
  *
  * @param {Object} state         Global application state.
  * @param {string} attributeName Autosave attribute name.
@@ -4628,7 +4628,7 @@ var selectors_isEditedPostAutosaveable = Object(external_this_wp_data_["createRe
  * autosave).
  *
  * @deprecated since 5.6. Callers should use the `getAutosave( postType, postId, userId )`
- * 			   selector from the '@wordpress/core-data' package.
+ *                selector from the '@wordpress/core-data' package.
  *
  * @param {Object} state Editor state.
  *
@@ -12567,10 +12567,10 @@ function (_Component) {
         onKeyDown: this.onKeyDown,
         onKeyPress: this.onUnselect
         /*
-        	Only autofocus the title when the post is entirely empty.
-        	This should only happen for a new post, which means we
-        	focus the title on new post so the author can start typing
-        	right away, without needing to click anything.
+            Only autofocus the title when the post is entirely empty.
+            This should only happen for a new post, which means we
+            focus the title on new post so the author can start typing
+            right away, without needing to click anything.
         */
 
         /* eslint-disable jsx-a11y/no-autofocus */
@@ -14191,124 +14191,124 @@ function _objectWithoutPropertiesLoose(source, excluded) {
  * @return {F & MemizeMemoizedFunction} Memoized function.
  */
 function memize( fn, options ) {
-	var size = 0;
+    var size = 0;
 
-	/** @type {?MemizeCacheNode|undefined} */
-	var head;
+    /** @type {?MemizeCacheNode|undefined} */
+    var head;
 
-	/** @type {?MemizeCacheNode|undefined} */
-	var tail;
+    /** @type {?MemizeCacheNode|undefined} */
+    var tail;
 
-	options = options || {};
+    options = options || {};
 
-	function memoized( /* ...args */ ) {
-		var node = head,
-			len = arguments.length,
-			args, i;
+    function memoized( /* ...args */ ) {
+        var node = head,
+            len = arguments.length,
+            args, i;
 
-		searchCache: while ( node ) {
-			// Perform a shallow equality test to confirm that whether the node
-			// under test is a candidate for the arguments passed. Two arrays
-			// are shallowly equal if their length matches and each entry is
-			// strictly equal between the two sets. Avoid abstracting to a
-			// function which could incur an arguments leaking deoptimization.
+        searchCache: while ( node ) {
+            // Perform a shallow equality test to confirm that whether the node
+            // under test is a candidate for the arguments passed. Two arrays
+            // are shallowly equal if their length matches and each entry is
+            // strictly equal between the two sets. Avoid abstracting to a
+            // function which could incur an arguments leaking deoptimization.
 
-			// Check whether node arguments match arguments length
-			if ( node.args.length !== arguments.length ) {
-				node = node.next;
-				continue;
-			}
+            // Check whether node arguments match arguments length
+            if ( node.args.length !== arguments.length ) {
+                node = node.next;
+                continue;
+            }
 
-			// Check whether node arguments match arguments values
-			for ( i = 0; i < len; i++ ) {
-				if ( node.args[ i ] !== arguments[ i ] ) {
-					node = node.next;
-					continue searchCache;
-				}
-			}
+            // Check whether node arguments match arguments values
+            for ( i = 0; i < len; i++ ) {
+                if ( node.args[ i ] !== arguments[ i ] ) {
+                    node = node.next;
+                    continue searchCache;
+                }
+            }
 
-			// At this point we can assume we've found a match
+            // At this point we can assume we've found a match
 
-			// Surface matched node to head if not already
-			if ( node !== head ) {
-				// As tail, shift to previous. Must only shift if not also
-				// head, since if both head and tail, there is no previous.
-				if ( node === tail ) {
-					tail = node.prev;
-				}
+            // Surface matched node to head if not already
+            if ( node !== head ) {
+                // As tail, shift to previous. Must only shift if not also
+                // head, since if both head and tail, there is no previous.
+                if ( node === tail ) {
+                    tail = node.prev;
+                }
 
-				// Adjust siblings to point to each other. If node was tail,
-				// this also handles new tail's empty `next` assignment.
-				/** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
-				if ( node.next ) {
-					node.next.prev = node.prev;
-				}
+                // Adjust siblings to point to each other. If node was tail,
+                // this also handles new tail's empty `next` assignment.
+                /** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
+                if ( node.next ) {
+                    node.next.prev = node.prev;
+                }
 
-				node.next = head;
-				node.prev = null;
-				/** @type {MemizeCacheNode} */ ( head ).prev = node;
-				head = node;
-			}
+                node.next = head;
+                node.prev = null;
+                /** @type {MemizeCacheNode} */ ( head ).prev = node;
+                head = node;
+            }
 
-			// Return immediately
-			return node.val;
-		}
+            // Return immediately
+            return node.val;
+        }
 
-		// No cached value found. Continue to insertion phase:
+        // No cached value found. Continue to insertion phase:
 
-		// Create a copy of arguments (avoid leaking deoptimization)
-		args = new Array( len );
-		for ( i = 0; i < len; i++ ) {
-			args[ i ] = arguments[ i ];
-		}
+        // Create a copy of arguments (avoid leaking deoptimization)
+        args = new Array( len );
+        for ( i = 0; i < len; i++ ) {
+            args[ i ] = arguments[ i ];
+        }
 
-		node = {
-			args: args,
+        node = {
+            args: args,
 
-			// Generate the result from original function
-			val: fn.apply( null, args ),
-		};
+            // Generate the result from original function
+            val: fn.apply( null, args ),
+        };
 
-		// Don't need to check whether node is already head, since it would
-		// have been returned above already if it was
+        // Don't need to check whether node is already head, since it would
+        // have been returned above already if it was
 
-		// Shift existing head down list
-		if ( head ) {
-			head.prev = node;
-			node.next = head;
-		} else {
-			// If no head, follows that there's no tail (at initial or reset)
-			tail = node;
-		}
+        // Shift existing head down list
+        if ( head ) {
+            head.prev = node;
+            node.next = head;
+        } else {
+            // If no head, follows that there's no tail (at initial or reset)
+            tail = node;
+        }
 
-		// Trim tail if we're reached max size and are pending cache insertion
-		if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
-			tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
-			/** @type {MemizeCacheNode} */ ( tail ).next = null;
-		} else {
-			size++;
-		}
+        // Trim tail if we're reached max size and are pending cache insertion
+        if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
+            tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
+            /** @type {MemizeCacheNode} */ ( tail ).next = null;
+        } else {
+            size++;
+        }
 
-		head = node;
+        head = node;
 
-		return node.val;
-	}
+        return node.val;
+    }
 
-	memoized.clear = function() {
-		head = null;
-		tail = null;
-		size = 0;
-	};
+    memoized.clear = function() {
+        head = null;
+        tail = null;
+        size = 0;
+    };
 
-	if ( false ) {}
+    if ( false ) {}
 
-	// Ignore reason: There's not a clear solution to create an intersection of
-	// the function with additional properties, where the goal is to retain the
-	// function signature of the incoming argument and add control properties
-	// on the return value.
+    // Ignore reason: There's not a clear solution to create an intersection of
+    // the function with additional properties, where the goal is to retain the
+    // function signature of the incoming argument and add control properties
+    // on the return value.
 
-	// @ts-ignore
-	return memoized;
+    // @ts-ignore
+    return memoized;
 }
 
 module.exports = memize;
@@ -14793,48 +14793,48 @@ exports["default"] = TextareaAutosize_1["default"];
 
 
 function flattenIntoMap( map, effects ) {
-	var i;
-	if ( Array.isArray( effects ) ) {
-		for ( i = 0; i < effects.length; i++ ) {
-			flattenIntoMap( map, effects[ i ] );
-		}
-	} else {
-		for ( i in effects ) {
-			map[ i ] = ( map[ i ] || [] ).concat( effects[ i ] );
-		}
-	}
+    var i;
+    if ( Array.isArray( effects ) ) {
+        for ( i = 0; i < effects.length; i++ ) {
+            flattenIntoMap( map, effects[ i ] );
+        }
+    } else {
+        for ( i in effects ) {
+            map[ i ] = ( map[ i ] || [] ).concat( effects[ i ] );
+        }
+    }
 }
 
 function refx( effects ) {
-	var map = {},
-		middleware;
+    var map = {},
+        middleware;
 
-	flattenIntoMap( map, effects );
+    flattenIntoMap( map, effects );
 
-	middleware = function( store ) {
-		return function( next ) {
-			return function( action ) {
-				var handlers = map[ action.type ],
-					result = next( action ),
-					i, handlerAction;
+    middleware = function( store ) {
+        return function( next ) {
+            return function( action ) {
+                var handlers = map[ action.type ],
+                    result = next( action ),
+                    i, handlerAction;
 
-				if ( handlers ) {
-					for ( i = 0; i < handlers.length; i++ ) {
-						handlerAction = handlers[ i ]( action, store );
-						if ( handlerAction ) {
-							store.dispatch( handlerAction );
-						}
-					}
-				}
+                if ( handlers ) {
+                    for ( i = 0; i < handlers.length; i++ ) {
+                        handlerAction = handlers[ i ]( action, store );
+                        if ( handlerAction ) {
+                            store.dispatch( handlerAction );
+                        }
+                    }
+                }
 
-				return result;
-			};
-		};
-	};
+                return result;
+            };
+        };
+    };
 
-	middleware.effects = map;
+    middleware.effects = map;
 
-	return middleware;
+    return middleware;
 }
 
 module.exports = refx;

@@ -1,88 +1,88 @@
 this["wp"] = this["wp"] || {}; this["wp"]["editPost"] =
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/     // The module cache
+/******/     var installedModules = {};
 /******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
+/******/     // The require function
+/******/     function __webpack_require__(moduleId) {
 /******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
+/******/         // Check if module is in cache
+/******/         if(installedModules[moduleId]) {
+/******/             return installedModules[moduleId].exports;
+/******/         }
+/******/         // Create a new module (and put it into the cache)
+/******/         var module = installedModules[moduleId] = {
+/******/             i: moduleId,
+/******/             l: false,
+/******/             exports: {}
+/******/         };
 /******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/         // Execute the module function
+/******/         modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
+/******/         // Flag the module as loaded
+/******/         module.l = true;
 /******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/         // Return the exports of the module
+/******/         return module.exports;
+/******/     }
 /******/
 /******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 423);
+/******/     // expose the modules object (__webpack_modules__)
+/******/     __webpack_require__.m = modules;
+/******/
+/******/     // expose the module cache
+/******/     __webpack_require__.c = installedModules;
+/******/
+/******/     // define getter function for harmony exports
+/******/     __webpack_require__.d = function(exports, name, getter) {
+/******/         if(!__webpack_require__.o(exports, name)) {
+/******/             Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/         }
+/******/     };
+/******/
+/******/     // define __esModule on exports
+/******/     __webpack_require__.r = function(exports) {
+/******/         if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/             Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/         }
+/******/         Object.defineProperty(exports, '__esModule', { value: true });
+/******/     };
+/******/
+/******/     // create a fake namespace object
+/******/     // mode & 1: value is a module id, require it
+/******/     // mode & 2: merge all properties of value into the ns
+/******/     // mode & 4: return value when already ns object
+/******/     // mode & 8|1: behave like require
+/******/     __webpack_require__.t = function(value, mode) {
+/******/         if(mode & 1) value = __webpack_require__(value);
+/******/         if(mode & 8) return value;
+/******/         if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/         var ns = Object.create(null);
+/******/         __webpack_require__.r(ns);
+/******/         Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/         if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/         return ns;
+/******/     };
+/******/
+/******/     // getDefaultExport function for compatibility with non-harmony modules
+/******/     __webpack_require__.n = function(module) {
+/******/         var getter = module && module.__esModule ?
+/******/             function getDefault() { return module['default']; } :
+/******/             function getModuleExports() { return module; };
+/******/         __webpack_require__.d(getter, 'a', getter);
+/******/         return getter;
+/******/     };
+/******/
+/******/     // Object.prototype.hasOwnProperty.call
+/******/     __webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/     // __webpack_public_path__
+/******/     __webpack_require__.p = "";
+/******/
+/******/
+/******/     // Load entry module and return exports
+/******/     return __webpack_require__(__webpack_require__.s = 423);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -119,48 +119,48 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /* global define */
 
 (function () {
-	'use strict';
+    'use strict';
 
-	var hasOwn = {}.hasOwnProperty;
+    var hasOwn = {}.hasOwnProperty;
 
-	function classNames () {
-		var classes = [];
+    function classNames () {
+        var classes = [];
 
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
+        for (var i = 0; i < arguments.length; i++) {
+            var arg = arguments[i];
+            if (!arg) continue;
 
-			var argType = typeof arg;
+            var argType = typeof arg;
 
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
+            if (argType === 'string' || argType === 'number') {
+                classes.push(arg);
+            } else if (Array.isArray(arg) && arg.length) {
+                var inner = classNames.apply(null, arg);
+                if (inner) {
+                    classes.push(inner);
+                }
+            } else if (argType === 'object') {
+                for (var key in arg) {
+                    if (hasOwn.call(arg, key) && arg[key]) {
+                        classes.push(key);
+                    }
+                }
+            }
+        }
 
-		return classes.join(' ');
-	}
+        return classes.join(' ');
+    }
 
-	if ( true && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
+    if ( true && module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (true) {
+        // register as 'classnames', consistent with npm package name
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+            return classNames;
+        }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+                __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else {}
 }());
 
 
@@ -676,7 +676,7 @@ hasWeakMap = typeof WeakMap !== 'undefined';
  * @return {Array} Value returned as entry in array.
  */
 function arrayOf( value ) {
-	return [ value ];
+    return [ value ];
 }
 
 /**
@@ -688,7 +688,7 @@ function arrayOf( value ) {
  * @return {boolean} Whether value is object-like.
  */
 function isObjectLike( value ) {
-	return !! value && 'object' === typeof value;
+    return !! value && 'object' === typeof value;
 }
 
 /**
@@ -697,13 +697,13 @@ function isObjectLike( value ) {
  * @return {Object} Cache object.
  */
 function createCache() {
-	var cache = {
-		clear: function() {
-			cache.head = null;
-		},
-	};
+    var cache = {
+        clear: function() {
+            cache.head = null;
+        },
+    };
 
-	return cache;
+    return cache;
 }
 
 /**
@@ -717,19 +717,19 @@ function createCache() {
  * @return {boolean} Whether arrays are shallowly equal.
  */
 function isShallowEqual( a, b, fromIndex ) {
-	var i;
+    var i;
 
-	if ( a.length !== b.length ) {
-		return false;
-	}
+    if ( a.length !== b.length ) {
+        return false;
+    }
 
-	for ( i = fromIndex; i < a.length; i++ ) {
-		if ( a[ i ] !== b[ i ] ) {
-			return false;
-		}
-	}
+    for ( i = fromIndex; i < a.length; i++ ) {
+        if ( a[ i ] !== b[ i ] ) {
+            return false;
+        }
+    }
 
-	return true;
+    return true;
 }
 
 /**
@@ -748,181 +748,181 @@ function isShallowEqual( a, b, fromIndex ) {
  * @return {Function} Memoized selector.
  */
 /* harmony default export */ __webpack_exports__["a"] = (function( selector, getDependants ) {
-	var rootCache, getCache;
+    var rootCache, getCache;
 
-	// Use object source as dependant if getter not provided
-	if ( ! getDependants ) {
-		getDependants = arrayOf;
-	}
+    // Use object source as dependant if getter not provided
+    if ( ! getDependants ) {
+        getDependants = arrayOf;
+    }
 
-	/**
-	 * Returns the root cache. If WeakMap is supported, this is assigned to the
-	 * root WeakMap cache set, otherwise it is a shared instance of the default
-	 * cache object.
-	 *
-	 * @return {(WeakMap|Object)} Root cache object.
-	 */
-	function getRootCache() {
-		return rootCache;
-	}
+    /**
+     * Returns the root cache. If WeakMap is supported, this is assigned to the
+     * root WeakMap cache set, otherwise it is a shared instance of the default
+     * cache object.
+     *
+     * @return {(WeakMap|Object)} Root cache object.
+     */
+    function getRootCache() {
+        return rootCache;
+    }
 
-	/**
-	 * Returns the cache for a given dependants array. When possible, a WeakMap
-	 * will be used to create a unique cache for each set of dependants. This
-	 * is feasible due to the nature of WeakMap in allowing garbage collection
-	 * to occur on entries where the key object is no longer referenced. Since
-	 * WeakMap requires the key to be an object, this is only possible when the
-	 * dependant is object-like. The root cache is created as a hierarchy where
-	 * each top-level key is the first entry in a dependants set, the value a
-	 * WeakMap where each key is the next dependant, and so on. This continues
-	 * so long as the dependants are object-like. If no dependants are object-
-	 * like, then the cache is shared across all invocations.
-	 *
-	 * @see isObjectLike
-	 *
-	 * @param {Array} dependants Selector dependants.
-	 *
-	 * @return {Object} Cache object.
-	 */
-	function getWeakMapCache( dependants ) {
-		var caches = rootCache,
-			isUniqueByDependants = true,
-			i, dependant, map, cache;
+    /**
+     * Returns the cache for a given dependants array. When possible, a WeakMap
+     * will be used to create a unique cache for each set of dependants. This
+     * is feasible due to the nature of WeakMap in allowing garbage collection
+     * to occur on entries where the key object is no longer referenced. Since
+     * WeakMap requires the key to be an object, this is only possible when the
+     * dependant is object-like. The root cache is created as a hierarchy where
+     * each top-level key is the first entry in a dependants set, the value a
+     * WeakMap where each key is the next dependant, and so on. This continues
+     * so long as the dependants are object-like. If no dependants are object-
+     * like, then the cache is shared across all invocations.
+     *
+     * @see isObjectLike
+     *
+     * @param {Array} dependants Selector dependants.
+     *
+     * @return {Object} Cache object.
+     */
+    function getWeakMapCache( dependants ) {
+        var caches = rootCache,
+            isUniqueByDependants = true,
+            i, dependant, map, cache;
 
-		for ( i = 0; i < dependants.length; i++ ) {
-			dependant = dependants[ i ];
+        for ( i = 0; i < dependants.length; i++ ) {
+            dependant = dependants[ i ];
 
-			// Can only compose WeakMap from object-like key.
-			if ( ! isObjectLike( dependant ) ) {
-				isUniqueByDependants = false;
-				break;
-			}
+            // Can only compose WeakMap from object-like key.
+            if ( ! isObjectLike( dependant ) ) {
+                isUniqueByDependants = false;
+                break;
+            }
 
-			// Does current segment of cache already have a WeakMap?
-			if ( caches.has( dependant ) ) {
-				// Traverse into nested WeakMap.
-				caches = caches.get( dependant );
-			} else {
-				// Create, set, and traverse into a new one.
-				map = new WeakMap();
-				caches.set( dependant, map );
-				caches = map;
-			}
-		}
+            // Does current segment of cache already have a WeakMap?
+            if ( caches.has( dependant ) ) {
+                // Traverse into nested WeakMap.
+                caches = caches.get( dependant );
+            } else {
+                // Create, set, and traverse into a new one.
+                map = new WeakMap();
+                caches.set( dependant, map );
+                caches = map;
+            }
+        }
 
-		// We use an arbitrary (but consistent) object as key for the last item
-		// in the WeakMap to serve as our running cache.
-		if ( ! caches.has( LEAF_KEY ) ) {
-			cache = createCache();
-			cache.isUniqueByDependants = isUniqueByDependants;
-			caches.set( LEAF_KEY, cache );
-		}
+        // We use an arbitrary (but consistent) object as key for the last item
+        // in the WeakMap to serve as our running cache.
+        if ( ! caches.has( LEAF_KEY ) ) {
+            cache = createCache();
+            cache.isUniqueByDependants = isUniqueByDependants;
+            caches.set( LEAF_KEY, cache );
+        }
 
-		return caches.get( LEAF_KEY );
-	}
+        return caches.get( LEAF_KEY );
+    }
 
-	// Assign cache handler by availability of WeakMap
-	getCache = hasWeakMap ? getWeakMapCache : getRootCache;
+    // Assign cache handler by availability of WeakMap
+    getCache = hasWeakMap ? getWeakMapCache : getRootCache;
 
-	/**
-	 * Resets root memoization cache.
-	 */
-	function clear() {
-		rootCache = hasWeakMap ? new WeakMap() : createCache();
-	}
+    /**
+     * Resets root memoization cache.
+     */
+    function clear() {
+        rootCache = hasWeakMap ? new WeakMap() : createCache();
+    }
 
-	// eslint-disable-next-line jsdoc/check-param-names
-	/**
-	 * The augmented selector call, considering first whether dependants have
-	 * changed before passing it to underlying memoize function.
-	 *
-	 * @param {Object} source    Source object for derivation.
-	 * @param {...*}   extraArgs Additional arguments to pass to selector.
-	 *
-	 * @return {*} Selector result.
-	 */
-	function callSelector( /* source, ...extraArgs */ ) {
-		var len = arguments.length,
-			cache, node, i, args, dependants;
+    // eslint-disable-next-line jsdoc/check-param-names
+    /**
+     * The augmented selector call, considering first whether dependants have
+     * changed before passing it to underlying memoize function.
+     *
+     * @param {Object} source    Source object for derivation.
+     * @param {...*}   extraArgs Additional arguments to pass to selector.
+     *
+     * @return {*} Selector result.
+     */
+    function callSelector( /* source, ...extraArgs */ ) {
+        var len = arguments.length,
+            cache, node, i, args, dependants;
 
-		// Create copy of arguments (avoid leaking deoptimization).
-		args = new Array( len );
-		for ( i = 0; i < len; i++ ) {
-			args[ i ] = arguments[ i ];
-		}
+        // Create copy of arguments (avoid leaking deoptimization).
+        args = new Array( len );
+        for ( i = 0; i < len; i++ ) {
+            args[ i ] = arguments[ i ];
+        }
 
-		dependants = getDependants.apply( null, args );
-		cache = getCache( dependants );
+        dependants = getDependants.apply( null, args );
+        cache = getCache( dependants );
 
-		// If not guaranteed uniqueness by dependants (primitive type or lack
-		// of WeakMap support), shallow compare against last dependants and, if
-		// references have changed, destroy cache to recalculate result.
-		if ( ! cache.isUniqueByDependants ) {
-			if ( cache.lastDependants && ! isShallowEqual( dependants, cache.lastDependants, 0 ) ) {
-				cache.clear();
-			}
+        // If not guaranteed uniqueness by dependants (primitive type or lack
+        // of WeakMap support), shallow compare against last dependants and, if
+        // references have changed, destroy cache to recalculate result.
+        if ( ! cache.isUniqueByDependants ) {
+            if ( cache.lastDependants && ! isShallowEqual( dependants, cache.lastDependants, 0 ) ) {
+                cache.clear();
+            }
 
-			cache.lastDependants = dependants;
-		}
+            cache.lastDependants = dependants;
+        }
 
-		node = cache.head;
-		while ( node ) {
-			// Check whether node arguments match arguments
-			if ( ! isShallowEqual( node.args, args, 1 ) ) {
-				node = node.next;
-				continue;
-			}
+        node = cache.head;
+        while ( node ) {
+            // Check whether node arguments match arguments
+            if ( ! isShallowEqual( node.args, args, 1 ) ) {
+                node = node.next;
+                continue;
+            }
 
-			// At this point we can assume we've found a match
+            // At this point we can assume we've found a match
 
-			// Surface matched node to head if not already
-			if ( node !== cache.head ) {
-				// Adjust siblings to point to each other.
-				node.prev.next = node.next;
-				if ( node.next ) {
-					node.next.prev = node.prev;
-				}
+            // Surface matched node to head if not already
+            if ( node !== cache.head ) {
+                // Adjust siblings to point to each other.
+                node.prev.next = node.next;
+                if ( node.next ) {
+                    node.next.prev = node.prev;
+                }
 
-				node.next = cache.head;
-				node.prev = null;
-				cache.head.prev = node;
-				cache.head = node;
-			}
+                node.next = cache.head;
+                node.prev = null;
+                cache.head.prev = node;
+                cache.head = node;
+            }
 
-			// Return immediately
-			return node.val;
-		}
+            // Return immediately
+            return node.val;
+        }
 
-		// No cached value found. Continue to insertion phase:
+        // No cached value found. Continue to insertion phase:
 
-		node = {
-			// Generate the result from original function
-			val: selector.apply( null, args ),
-		};
+        node = {
+            // Generate the result from original function
+            val: selector.apply( null, args ),
+        };
 
-		// Avoid including the source object in the cache.
-		args[ 0 ] = null;
-		node.args = args;
+        // Avoid including the source object in the cache.
+        args[ 0 ] = null;
+        node.args = args;
 
-		// Don't need to check whether node is already head, since it would
-		// have been returned above already if it was
+        // Don't need to check whether node is already head, since it would
+        // have been returned above already if it was
 
-		// Shift existing head down list
-		if ( cache.head ) {
-			cache.head.prev = node;
-			node.next = cache.head;
-		}
+        // Shift existing head down list
+        if ( cache.head ) {
+            cache.head.prev = node;
+            node.next = cache.head;
+        }
 
-		cache.head = node;
+        cache.head = node;
 
-		return node.val;
-	}
+        return node.val;
+    }
 
-	callSelector.getDependants = getDependants;
-	callSelector.clear = clear;
-	clear();
+    callSelector.getDependants = getDependants;
+    callSelector.clear = clear;
+    clear();
 
-	return callSelector;
+    return callSelector;
 });
 
 
@@ -2148,7 +2148,7 @@ function selectors_isEditorPanelOpened(state, panelName) {
 /**
  * Returns true if a modal is active, or false otherwise.
  *
- * @param  {Object}  state 	   Global application state.
+ * @param  {Object}  state        Global application state.
  * @param  {string}  modalName A string that uniquely identifies the modal.
  *
  * @return {boolean} Whether the modal is active.
@@ -4582,11 +4582,11 @@ function PostPublishButtonOrToggle(_ref) {
    * - is published
    * - is scheduled to be published
    * - is pending and can't be published (but only for viewports >= medium).
-   * 	 Originally, we considered showing a button for pending posts that couldn't be published
-   * 	 (for example, for an author with the contributor role). Some languages can have
-   * 	 long translations for "Submit for review", so given the lack of UI real estate available
-   * 	 we decided to take into account the viewport in that case.
-   *  	 See: https://github.com/WordPress/gutenberg/issues/10475
+   *      Originally, we considered showing a button for pending posts that couldn't be published
+   *      (for example, for an author with the contributor role). Some languages can have
+   *      long translations for "Submit for review", so given the lack of UI real estate available
+   *      we decided to take into account the viewport in that case.
+   *       See: https://github.com/WordPress/gutenberg/issues/10475
    *
    * 2) Then, in small viewports, we'll show a TOGGLE.
    *
@@ -5082,13 +5082,13 @@ var plugin_post_status_info_createSlotFill = Object(external_this_wp_components_
  * var PluginPostStatusInfo = wp.editPost.PluginPostStatusInfo;
  *
  * function MyPluginPostStatusInfo() {
- * 	return wp.element.createElement(
- * 		PluginPostStatusInfo,
- * 		{
- * 			className: 'my-plugin-post-status-info',
- * 		},
- * 		__( 'My post status info' )
- * 	)
+ *     return wp.element.createElement(
+ *         PluginPostStatusInfo,
+ *         {
+ *             className: 'my-plugin-post-status-info',
+ *         },
+ *         __( 'My post status info' )
+ *     )
  * }
  * ```
  *
@@ -5099,11 +5099,11 @@ var plugin_post_status_info_createSlotFill = Object(external_this_wp_components_
  * const { PluginPostStatusInfo } = wp.editPost;
  *
  * const MyPluginPostStatusInfo = () => (
- * 	<PluginPostStatusInfo
- * 		className="my-plugin-post-status-info"
- * 	>
- * 		{ __( 'My post status info' ) }
- * 	</PluginPostStatusInfo>
+ *     <PluginPostStatusInfo
+ *         className="my-plugin-post-status-info"
+ *     >
+ *         { __( 'My post status info' ) }
+ *     </PluginPostStatusInfo>
  * );
  * ```
  *
@@ -5975,18 +5975,18 @@ var plugin_document_setting_panel_PluginDocumentSettingFill = function PluginDoc
  * var PluginDocumentSettingPanel = wp.editPost.PluginDocumentSettingPanel;
  *
  * function MyDocumentSettingPlugin() {
- * 	return el(
- * 		PluginDocumentSettingPanel,
- * 		{
- * 			className: 'my-document-setting-plugin',
- * 			title: 'My Panel',
- * 		},
- * 		__( 'My Document Setting Panel' )
- * 	);
+ *     return el(
+ *         PluginDocumentSettingPanel,
+ *         {
+ *             className: 'my-document-setting-plugin',
+ *             title: 'My Panel',
+ *         },
+ *         __( 'My Document Setting Panel' )
+ *     );
  * }
  *
  * registerPlugin( 'my-document-setting-plugin', {
- * 		render: MyDocumentSettingPlugin
+ *         render: MyDocumentSettingPlugin
  * } );
  * ```
  *
@@ -5997,10 +5997,10 @@ var plugin_document_setting_panel_PluginDocumentSettingFill = function PluginDoc
  * const { PluginDocumentSettingPanel } = wp.editPost;
  *
  * const MyDocumentSettingTest = () => (
- * 		<PluginDocumentSettingPanel className="my-document-setting-plugin" title="My Panel">
- *			<p>My Document Setting Panel</p>
- *		</PluginDocumentSettingPanel>
- *	);
+ *         <PluginDocumentSettingPanel className="my-document-setting-plugin" title="My Panel">
+ *            <p>My Document Setting Panel</p>
+ *        </PluginDocumentSettingPanel>
+ *    );
  *
  *  registerPlugin( 'document-setting-test', { render: MyDocumentSettingTest } );
  * ```
@@ -6128,15 +6128,15 @@ var plugin_post_publish_panel_PluginPostPublishPanelFill = function PluginPostPu
  * var PluginPostPublishPanel = wp.editPost.PluginPostPublishPanel;
  *
  * function MyPluginPostPublishPanel() {
- * 	return wp.element.createElement(
- * 		PluginPostPublishPanel,
- * 		{
- * 			className: 'my-plugin-post-publish-panel',
- * 			title: __( 'My panel title' ),
- * 			initialOpen: true,
- * 		},
- * 		__( 'My panel content' )
- * 	);
+ *     return wp.element.createElement(
+ *         PluginPostPublishPanel,
+ *         {
+ *             className: 'my-plugin-post-publish-panel',
+ *             title: __( 'My panel title' ),
+ *             initialOpen: true,
+ *         },
+ *         __( 'My panel content' )
+ *     );
  * }
  * ```
  *
@@ -6147,13 +6147,13 @@ var plugin_post_publish_panel_PluginPostPublishPanelFill = function PluginPostPu
  * const { PluginPostPublishPanel } = wp.editPost;
  *
  * const MyPluginPostPublishPanel = () => (
- * 	<PluginPostPublishPanel
- * 		className="my-plugin-post-publish-panel"
- * 		title={ __( 'My panel title' ) }
- * 		initialOpen={ true }
- * 	>
+ *     <PluginPostPublishPanel
+ *         className="my-plugin-post-publish-panel"
+ *         title={ __( 'My panel title' ) }
+ *         initialOpen={ true }
+ *     >
  *         { __( 'My panel content' ) }
- * 	</PluginPostPublishPanel>
+ *     </PluginPostPublishPanel>
  * );
  * ```
  *
@@ -6217,15 +6217,15 @@ var plugin_pre_publish_panel_PluginPrePublishPanelFill = function PluginPrePubli
  * var PluginPrePublishPanel = wp.editPost.PluginPrePublishPanel;
  *
  * function MyPluginPrePublishPanel() {
- * 	return wp.element.createElement(
- * 		PluginPrePublishPanel,
- * 		{
- * 			className: 'my-plugin-pre-publish-panel',
- * 			title: __( 'My panel title' ),
- * 			initialOpen: true,
- * 		},
- * 		__( 'My panel content' )
- * 	);
+ *     return wp.element.createElement(
+ *         PluginPrePublishPanel,
+ *         {
+ *             className: 'my-plugin-pre-publish-panel',
+ *             title: __( 'My panel title' ),
+ *             initialOpen: true,
+ *         },
+ *         __( 'My panel content' )
+ *     );
  * }
  * ```
  *
@@ -6236,13 +6236,13 @@ var plugin_pre_publish_panel_PluginPrePublishPanelFill = function PluginPrePubli
  * const { PluginPrePublishPanel } = wp.editPost;
  *
  * const MyPluginPrePublishPanel = () => (
- * 	<PluginPrePublishPanel
- * 		className="my-plugin-pre-publish-panel"
- * 		title={ __( 'My panel title' ) }
- * 		initialOpen={ true }
- * 	>
- * 	    { __( 'My panel content' ) }
- * 	</PluginPrePublishPanel>
+ *     <PluginPrePublishPanel
+ *         className="my-plugin-pre-publish-panel"
+ *         title={ __( 'My panel title' ) }
+ *         initialOpen={ true }
+ *     >
+ *         { __( 'My panel content' ) }
+ *     </PluginPrePublishPanel>
  * );
  * ```
  *
@@ -6847,19 +6847,19 @@ var shouldRenderItem = function shouldRenderItem(selectedBlocks, allowedBlocks) 
  * var PluginBlockSettingsMenuItem = wp.editPost.PluginBlockSettingsMenuItem;
  *
  * function doOnClick(){
- * 	// To be called when the user clicks the menu item.
+ *     // To be called when the user clicks the menu item.
  * }
  *
  * function MyPluginBlockSettingsMenuItem() {
- * 	return wp.element.createElement(
- * 		PluginBlockSettingsMenuItem,
- * 		{
- * 			allowedBlocks: [ 'core/paragraph' ],
- * 			icon: 'dashicon-name',
- * 			label: __( 'Menu item text' ),
- * 			onClick: doOnClick,
- * 		}
- * 	);
+ *     return wp.element.createElement(
+ *         PluginBlockSettingsMenuItem,
+ *         {
+ *             allowedBlocks: [ 'core/paragraph' ],
+ *             icon: 'dashicon-name',
+ *             label: __( 'Menu item text' ),
+ *             onClick: doOnClick,
+ *         }
+ *     );
  * }
  * ```
  *
@@ -6875,10 +6875,10 @@ var shouldRenderItem = function shouldRenderItem(selectedBlocks, allowedBlocks) 
  *
  * const MyPluginBlockSettingsMenuItem = () => (
  *     <PluginBlockSettingsMenuItem
- * 		allowedBlocks=[ 'core/paragraph' ]
- * 		icon='dashicon-name'
- * 		label=__( 'Menu item text' )
- * 		onClick={ doOnClick } />
+ *         allowedBlocks=[ 'core/paragraph' ]
+ *         icon='dashicon-name'
+ *         label=__( 'Menu item text' )
+ *         onClick={ doOnClick } />
  * );
  * ```
  *
@@ -6963,18 +6963,18 @@ var plugin_more_menu_item_PluginMoreMenuItem = function PluginMoreMenuItem(_ref)
  * var moreIcon = wp.element.createElement( 'svg' ); //... svg element.
  *
  * function onButtonClick() {
- * 	alert( 'Button clicked.' );
+ *     alert( 'Button clicked.' );
  * }
  *
  * function MyButtonMoreMenuItem() {
- * 	return wp.element.createElement(
- * 		PluginMoreMenuItem,
- * 		{
- * 			icon: moreIcon,
- * 			onClick: onButtonClick,
- * 		},
- * 		__( 'My button title' )
- * 	);
+ *     return wp.element.createElement(
+ *         PluginMoreMenuItem,
+ *         {
+ *             icon: moreIcon,
+ *             onClick: onButtonClick,
+ *         },
+ *         __( 'My button title' )
+ *     );
  * }
  * ```
  *
@@ -6986,16 +6986,16 @@ var plugin_more_menu_item_PluginMoreMenuItem = function PluginMoreMenuItem(_ref)
  * import { more } from '@wordpress/icons';
  *
  * function onButtonClick() {
- * 	alert( 'Button clicked.' );
+ *     alert( 'Button clicked.' );
  * }
  *
  * const MyButtonMoreMenuItem = () => (
- * 	<PluginMoreMenuItem
- * 		icon={ more }
- * 		onClick={ onButtonClick }
- * 	>
- * 		{ __( 'My button title' ) }
- * 	</PluginMoreMenuItem>
+ *     <PluginMoreMenuItem
+ *         icon={ more }
+ *         onClick={ onButtonClick }
+ *     >
+ *         { __( 'My button title' ) }
+ *     </PluginMoreMenuItem>
  * );
  * ```
  *
@@ -7087,19 +7087,19 @@ function PluginSidebar(props) {
  * var moreIcon = wp.element.createElement( 'svg' ); //... svg element.
  *
  * function MyPluginSidebar() {
- * 	return el(
- * 			PluginSidebar,
- * 			{
- * 				name: 'my-sidebar',
- * 				title: 'My sidebar title',
- * 				icon: moreIcon,
- * 			},
- * 			el(
- * 				PanelBody,
- * 				{},
- * 				__( 'My sidebar content' )
- * 			)
- * 	);
+ *     return el(
+ *             PluginSidebar,
+ *             {
+ *                 name: 'my-sidebar',
+ *                 title: 'My sidebar title',
+ *                 icon: moreIcon,
+ *             },
+ *             el(
+ *                 PanelBody,
+ *                 {},
+ *                 __( 'My sidebar content' )
+ *             )
+ *     );
  * }
  * ```
  *
@@ -7112,15 +7112,15 @@ function PluginSidebar(props) {
  * import { more } from '@wordpress/icons';
  *
  * const MyPluginSidebar = () => (
- * 	<PluginSidebar
- * 		name="my-sidebar"
- * 		title="My sidebar title"
- * 		icon={ more }
- * 	>
- * 		<PanelBody>
- * 			{ __( 'My sidebar content' ) }
- * 		</PanelBody>
- * 	</PluginSidebar>
+ *     <PluginSidebar
+ *         name="my-sidebar"
+ *         title="My sidebar title"
+ *         icon={ more }
+ *     >
+ *         <PanelBody>
+ *             { __( 'My sidebar content' ) }
+ *         </PanelBody>
+ *     </PluginSidebar>
  * );
  * ```
  *
@@ -7212,14 +7212,14 @@ var plugin_sidebar_more_menu_item_PluginSidebarMoreMenuItem = function PluginSid
  * var moreIcon = wp.element.createElement( 'svg' ); //... svg element.
  *
  * function MySidebarMoreMenuItem() {
- * 	return wp.element.createElement(
- * 		PluginSidebarMoreMenuItem,
- * 		{
- * 			target: 'my-sidebar',
- * 			icon: moreIcon,
- * 		},
- * 		__( 'My sidebar title' )
- * 	)
+ *     return wp.element.createElement(
+ *         PluginSidebarMoreMenuItem,
+ *         {
+ *             target: 'my-sidebar',
+ *             icon: moreIcon,
+ *         },
+ *         __( 'My sidebar title' )
+ *     )
  * }
  * ```
  *
@@ -7231,12 +7231,12 @@ var plugin_sidebar_more_menu_item_PluginSidebarMoreMenuItem = function PluginSid
  * import { more } from '@wordpress/icons';
  *
  * const MySidebarMoreMenuItem = () => (
- * 	<PluginSidebarMoreMenuItem
- * 		target="my-sidebar"
- * 		icon={ more }
- * 	>
- * 		{ __( 'My sidebar title' ) }
- * 	</PluginSidebarMoreMenuItem>
+ *     <PluginSidebarMoreMenuItem
+ *         target="my-sidebar"
+ *         icon={ more }
+ *     >
+ *         { __( 'My sidebar title' ) }
+ *     </PluginSidebarMoreMenuItem>
  * );
  * ```
  *
@@ -7472,124 +7472,124 @@ function _objectWithoutPropertiesLoose(source, excluded) {
  * @return {F & MemizeMemoizedFunction} Memoized function.
  */
 function memize( fn, options ) {
-	var size = 0;
+    var size = 0;
 
-	/** @type {?MemizeCacheNode|undefined} */
-	var head;
+    /** @type {?MemizeCacheNode|undefined} */
+    var head;
 
-	/** @type {?MemizeCacheNode|undefined} */
-	var tail;
+    /** @type {?MemizeCacheNode|undefined} */
+    var tail;
 
-	options = options || {};
+    options = options || {};
 
-	function memoized( /* ...args */ ) {
-		var node = head,
-			len = arguments.length,
-			args, i;
+    function memoized( /* ...args */ ) {
+        var node = head,
+            len = arguments.length,
+            args, i;
 
-		searchCache: while ( node ) {
-			// Perform a shallow equality test to confirm that whether the node
-			// under test is a candidate for the arguments passed. Two arrays
-			// are shallowly equal if their length matches and each entry is
-			// strictly equal between the two sets. Avoid abstracting to a
-			// function which could incur an arguments leaking deoptimization.
+        searchCache: while ( node ) {
+            // Perform a shallow equality test to confirm that whether the node
+            // under test is a candidate for the arguments passed. Two arrays
+            // are shallowly equal if their length matches and each entry is
+            // strictly equal between the two sets. Avoid abstracting to a
+            // function which could incur an arguments leaking deoptimization.
 
-			// Check whether node arguments match arguments length
-			if ( node.args.length !== arguments.length ) {
-				node = node.next;
-				continue;
-			}
+            // Check whether node arguments match arguments length
+            if ( node.args.length !== arguments.length ) {
+                node = node.next;
+                continue;
+            }
 
-			// Check whether node arguments match arguments values
-			for ( i = 0; i < len; i++ ) {
-				if ( node.args[ i ] !== arguments[ i ] ) {
-					node = node.next;
-					continue searchCache;
-				}
-			}
+            // Check whether node arguments match arguments values
+            for ( i = 0; i < len; i++ ) {
+                if ( node.args[ i ] !== arguments[ i ] ) {
+                    node = node.next;
+                    continue searchCache;
+                }
+            }
 
-			// At this point we can assume we've found a match
+            // At this point we can assume we've found a match
 
-			// Surface matched node to head if not already
-			if ( node !== head ) {
-				// As tail, shift to previous. Must only shift if not also
-				// head, since if both head and tail, there is no previous.
-				if ( node === tail ) {
-					tail = node.prev;
-				}
+            // Surface matched node to head if not already
+            if ( node !== head ) {
+                // As tail, shift to previous. Must only shift if not also
+                // head, since if both head and tail, there is no previous.
+                if ( node === tail ) {
+                    tail = node.prev;
+                }
 
-				// Adjust siblings to point to each other. If node was tail,
-				// this also handles new tail's empty `next` assignment.
-				/** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
-				if ( node.next ) {
-					node.next.prev = node.prev;
-				}
+                // Adjust siblings to point to each other. If node was tail,
+                // this also handles new tail's empty `next` assignment.
+                /** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
+                if ( node.next ) {
+                    node.next.prev = node.prev;
+                }
 
-				node.next = head;
-				node.prev = null;
-				/** @type {MemizeCacheNode} */ ( head ).prev = node;
-				head = node;
-			}
+                node.next = head;
+                node.prev = null;
+                /** @type {MemizeCacheNode} */ ( head ).prev = node;
+                head = node;
+            }
 
-			// Return immediately
-			return node.val;
-		}
+            // Return immediately
+            return node.val;
+        }
 
-		// No cached value found. Continue to insertion phase:
+        // No cached value found. Continue to insertion phase:
 
-		// Create a copy of arguments (avoid leaking deoptimization)
-		args = new Array( len );
-		for ( i = 0; i < len; i++ ) {
-			args[ i ] = arguments[ i ];
-		}
+        // Create a copy of arguments (avoid leaking deoptimization)
+        args = new Array( len );
+        for ( i = 0; i < len; i++ ) {
+            args[ i ] = arguments[ i ];
+        }
 
-		node = {
-			args: args,
+        node = {
+            args: args,
 
-			// Generate the result from original function
-			val: fn.apply( null, args ),
-		};
+            // Generate the result from original function
+            val: fn.apply( null, args ),
+        };
 
-		// Don't need to check whether node is already head, since it would
-		// have been returned above already if it was
+        // Don't need to check whether node is already head, since it would
+        // have been returned above already if it was
 
-		// Shift existing head down list
-		if ( head ) {
-			head.prev = node;
-			node.next = head;
-		} else {
-			// If no head, follows that there's no tail (at initial or reset)
-			tail = node;
-		}
+        // Shift existing head down list
+        if ( head ) {
+            head.prev = node;
+            node.next = head;
+        } else {
+            // If no head, follows that there's no tail (at initial or reset)
+            tail = node;
+        }
 
-		// Trim tail if we're reached max size and are pending cache insertion
-		if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
-			tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
-			/** @type {MemizeCacheNode} */ ( tail ).next = null;
-		} else {
-			size++;
-		}
+        // Trim tail if we're reached max size and are pending cache insertion
+        if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
+            tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
+            /** @type {MemizeCacheNode} */ ( tail ).next = null;
+        } else {
+            size++;
+        }
 
-		head = node;
+        head = node;
 
-		return node.val;
-	}
+        return node.val;
+    }
 
-	memoized.clear = function() {
-		head = null;
-		tail = null;
-		size = 0;
-	};
+    memoized.clear = function() {
+        head = null;
+        tail = null;
+        size = 0;
+    };
 
-	if ( false ) {}
+    if ( false ) {}
 
-	// Ignore reason: There's not a clear solution to create an intersection of
-	// the function with additional properties, where the goal is to retain the
-	// function signature of the incoming argument and add control properties
-	// on the return value.
+    // Ignore reason: There's not a clear solution to create an intersection of
+    // the function with additional properties, where the goal is to retain the
+    // function signature of the incoming argument and add control properties
+    // on the return value.
 
-	// @ts-ignore
-	return memoized;
+    // @ts-ignore
+    return memoized;
 }
 
 module.exports = memize;
@@ -7690,48 +7690,48 @@ function _assertThisInitialized(self) {
 
 
 function flattenIntoMap( map, effects ) {
-	var i;
-	if ( Array.isArray( effects ) ) {
-		for ( i = 0; i < effects.length; i++ ) {
-			flattenIntoMap( map, effects[ i ] );
-		}
-	} else {
-		for ( i in effects ) {
-			map[ i ] = ( map[ i ] || [] ).concat( effects[ i ] );
-		}
-	}
+    var i;
+    if ( Array.isArray( effects ) ) {
+        for ( i = 0; i < effects.length; i++ ) {
+            flattenIntoMap( map, effects[ i ] );
+        }
+    } else {
+        for ( i in effects ) {
+            map[ i ] = ( map[ i ] || [] ).concat( effects[ i ] );
+        }
+    }
 }
 
 function refx( effects ) {
-	var map = {},
-		middleware;
+    var map = {},
+        middleware;
 
-	flattenIntoMap( map, effects );
+    flattenIntoMap( map, effects );
 
-	middleware = function( store ) {
-		return function( next ) {
-			return function( action ) {
-				var handlers = map[ action.type ],
-					result = next( action ),
-					i, handlerAction;
+    middleware = function( store ) {
+        return function( next ) {
+            return function( action ) {
+                var handlers = map[ action.type ],
+                    result = next( action ),
+                    i, handlerAction;
 
-				if ( handlers ) {
-					for ( i = 0; i < handlers.length; i++ ) {
-						handlerAction = handlers[ i ]( action, store );
-						if ( handlerAction ) {
-							store.dispatch( handlerAction );
-						}
-					}
-				}
+                if ( handlers ) {
+                    for ( i = 0; i < handlers.length; i++ ) {
+                        handlerAction = handlers[ i ]( action, store );
+                        if ( handlerAction ) {
+                            store.dispatch( handlerAction );
+                        }
+                    }
+                }
 
-				return result;
-			};
-		};
-	};
+                return result;
+            };
+        };
+    };
 
-	middleware.effects = map;
+    middleware.effects = map;
 
-	return middleware;
+    return middleware;
 }
 
 module.exports = refx;
