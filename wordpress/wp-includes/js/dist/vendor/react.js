@@ -10,9 +10,9 @@
 'use strict';
 
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.React = factory());
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global.React = factory());
 }(this, (function () { 'use strict';
 
 // TODO: this is special because it gets imported during build.
@@ -69,82 +69,82 @@ var hasOwnProperty = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
 function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
+    if (val === null || val === undefined) {
+        throw new TypeError('Object.assign cannot be called with null or undefined');
+    }
 
-	return Object(val);
+    return Object(val);
 }
 
 function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
+    try {
+        if (!Object.assign) {
+            return false;
+        }
 
-		// Detect buggy property enumeration order in older V8 versions.
+        // Detect buggy property enumeration order in older V8 versions.
 
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
+        // https://bugs.chromium.org/p/v8/issues/detail?id=4118
+        var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+        test1[5] = 'de';
+        if (Object.getOwnPropertyNames(test1)[0] === '5') {
+            return false;
+        }
 
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test2 = {};
+        for (var i = 0; i < 10; i++) {
+            test2['_' + String.fromCharCode(i)] = i;
+        }
+        var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+            return test2[n];
+        });
+        if (order2.join('') !== '0123456789') {
+            return false;
+        }
 
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
+        // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+        var test3 = {};
+        'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+            test3[letter] = letter;
+        });
+        if (Object.keys(Object.assign({}, test3)).join('') !==
+                'abcdefghijklmnopqrst') {
+            return false;
+        }
 
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
+        return true;
+    } catch (err) {
+        // We don't expect any of the above to throw, but better to be safe.
+        return false;
+    }
 }
 
 var objectAssign = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
+    var from;
+    var to = toObject(target);
+    var symbols;
 
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
+    for (var s = 1; s < arguments.length; s++) {
+        from = Object(arguments[s]);
 
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
+        for (var key in from) {
+            if (hasOwnProperty.call(from, key)) {
+                to[key] = from[key];
+            }
+        }
 
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
+        if (getOwnPropertySymbols) {
+            symbols = getOwnPropertySymbols(from);
+            for (var i = 0; i < symbols.length; i++) {
+                if (propIsEnumerable.call(from, symbols[i])) {
+                    to[symbols[i]] = from[symbols[i]];
+                }
+            }
+        }
+    }
 
-	return to;
+    return to;
 };
 
 // Do not require this module directly! Use normal `invariant` calls with
@@ -3061,24 +3061,24 @@ var unstable_requestPaint = requestPaint;
 
 
 var Scheduler = Object.freeze({
-	unstable_ImmediatePriority: ImmediatePriority,
-	unstable_UserBlockingPriority: UserBlockingPriority,
-	unstable_NormalPriority: NormalPriority,
-	unstable_IdlePriority: IdlePriority,
-	unstable_LowPriority: LowPriority,
-	unstable_runWithPriority: unstable_runWithPriority,
-	unstable_next: unstable_next,
-	unstable_scheduleCallback: unstable_scheduleCallback,
-	unstable_cancelCallback: unstable_cancelCallback,
-	unstable_wrapCallback: unstable_wrapCallback,
-	unstable_getCurrentPriorityLevel: unstable_getCurrentPriorityLevel,
-	unstable_shouldYield: unstable_shouldYield,
-	unstable_requestPaint: unstable_requestPaint,
-	unstable_continueExecution: unstable_continueExecution,
-	unstable_pauseExecution: unstable_pauseExecution,
-	unstable_getFirstCallbackNode: unstable_getFirstCallbackNode,
-	get unstable_now () { return getCurrentTime; },
-	get unstable_forceFrameRate () { return forceFrameRate; }
+    unstable_ImmediatePriority: ImmediatePriority,
+    unstable_UserBlockingPriority: UserBlockingPriority,
+    unstable_NormalPriority: NormalPriority,
+    unstable_IdlePriority: IdlePriority,
+    unstable_LowPriority: LowPriority,
+    unstable_runWithPriority: unstable_runWithPriority,
+    unstable_next: unstable_next,
+    unstable_scheduleCallback: unstable_scheduleCallback,
+    unstable_cancelCallback: unstable_cancelCallback,
+    unstable_wrapCallback: unstable_wrapCallback,
+    unstable_getCurrentPriorityLevel: unstable_getCurrentPriorityLevel,
+    unstable_shouldYield: unstable_shouldYield,
+    unstable_requestPaint: unstable_requestPaint,
+    unstable_continueExecution: unstable_continueExecution,
+    unstable_pauseExecution: unstable_pauseExecution,
+    unstable_getFirstCallbackNode: unstable_getFirstCallbackNode,
+    get unstable_now () { return getCurrentTime; },
+    get unstable_forceFrameRate () { return forceFrameRate; }
 });
 
 // Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
@@ -3522,15 +3522,15 @@ function onWorkCanceled(interactions, threadID) {
 
 
 var SchedulerTracing = Object.freeze({
-	get __interactionsRef () { return interactionsRef; },
-	get __subscriberRef () { return subscriberRef; },
-	unstable_clear: unstable_clear,
-	unstable_getCurrent: unstable_getCurrent,
-	unstable_getThreadID: unstable_getThreadID,
-	unstable_trace: unstable_trace,
-	unstable_wrap: unstable_wrap,
-	unstable_subscribe: unstable_subscribe,
-	unstable_unsubscribe: unstable_unsubscribe
+    get __interactionsRef () { return interactionsRef; },
+    get __subscriberRef () { return subscriberRef; },
+    unstable_clear: unstable_clear,
+    unstable_getCurrent: unstable_getCurrent,
+    unstable_getThreadID: unstable_getThreadID,
+    unstable_trace: unstable_trace,
+    unstable_wrap: unstable_wrap,
+    unstable_subscribe: unstable_subscribe,
+    unstable_unsubscribe: unstable_unsubscribe
 });
 
 var ReactSharedInternals$2 = {
@@ -3700,7 +3700,7 @@ if (enableJSXTransformAPI) {
 
 
 var React$2 = Object.freeze({
-	default: React
+    default: React
 });
 
 var React$3 = ( React$2 && React ) || React$2;

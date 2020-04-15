@@ -19,9 +19,9 @@
  * @since Twenty Nineteen 1.0.0
  */
 function twentynineteen_switch_theme() {
-	switch_theme( WP_DEFAULT_THEME );
-	unset( $_GET['activated'] );
-	add_action( 'admin_notices', 'twentynineteen_upgrade_notice' );
+    switch_theme( WP_DEFAULT_THEME );
+    unset( $_GET['activated'] );
+    add_action( 'admin_notices', 'twentynineteen_upgrade_notice' );
 }
 add_action( 'after_switch_theme', 'twentynineteen_switch_theme' );
 
@@ -36,9 +36,9 @@ add_action( 'after_switch_theme', 'twentynineteen_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function twentynineteen_upgrade_notice() {
-	/* translators: %s: WordPress version. */
-	$message = sprintf( __( 'Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentynineteen' ), $GLOBALS['wp_version'] );
-	printf( '<div class="error"><p>%s</p></div>', $message );
+    /* translators: %s: WordPress version. */
+    $message = sprintf( __( 'Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentynineteen' ), $GLOBALS['wp_version'] );
+    printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
 /**
@@ -49,17 +49,17 @@ function twentynineteen_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function twentynineteen_customize() {
-	wp_die(
-		sprintf(
-			/* translators: %s: WordPress version. */
-			__( 'Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentynineteen' ),
-			$GLOBALS['wp_version']
-		),
-		'',
-		array(
-			'back_link' => true,
-		)
-	);
+    wp_die(
+        sprintf(
+            /* translators: %s: WordPress version. */
+            __( 'Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentynineteen' ),
+            $GLOBALS['wp_version']
+        ),
+        '',
+        array(
+            'back_link' => true,
+        )
+    );
 }
 add_action( 'load-customize.php', 'twentynineteen_customize' );
 
@@ -71,9 +71,9 @@ add_action( 'load-customize.php', 'twentynineteen_customize' );
  * @global string $wp_version WordPress version.
  */
 function twentynineteen_preview() {
-	if ( isset( $_GET['preview'] ) ) {
-		/* translators: %s: WordPress version. */
-		wp_die( sprintf( __( 'Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentynineteen' ), $GLOBALS['wp_version'] ) );
-	}
+    if ( isset( $_GET['preview'] ) ) {
+        /* translators: %s: WordPress version. */
+        wp_die( sprintf( __( 'Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentynineteen' ), $GLOBALS['wp_version'] ) );
+    }
 }
 add_action( 'template_redirect', 'twentynineteen_preview' );

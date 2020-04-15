@@ -8,7 +8,7 @@
 
 // Don't load directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+    die( '-1' );
 }
 ?>
 <form name="post" action="comment.php" method="post" id="post">
@@ -25,17 +25,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="post-body-content" class="edit-form-section edit-comment-section">
 <?php
 if ( 'approved' === wp_get_comment_status( $comment ) && $comment->comment_post_ID > 0 ) :
-	$comment_link = get_comment_link( $comment );
-	?>
+    $comment_link = get_comment_link( $comment );
+    ?>
 <div class="inside">
-	<div id="comment-link-box">
-		<strong><?php _ex( 'Permalink:', 'comment' ); ?></strong>
-		<span id="sample-permalink">
-			<a href="<?php echo esc_url( $comment_link ); ?>">
-				<?php echo esc_html( $comment_link ); ?>
-			</a>
-		</span>
-	</div>
+    <div id="comment-link-box">
+        <strong><?php _ex( 'Permalink:', 'comment' ); ?></strong>
+        <span id="sample-permalink">
+            <a href="<?php echo esc_url( $comment_link ); ?>">
+                <?php echo esc_html( $comment_link ); ?>
+            </a>
+        </span>
+    </div>
 </div>
 <?php endif; ?>
 <div id="namediv" class="stuffbox">
@@ -46,20 +46,20 @@ if ( 'approved' === wp_get_comment_status( $comment ) && $comment->comment_post_
 <table class="form-table editcomment" role="presentation">
 <tbody>
 <tr>
-	<td class="first"><label for="name"><?php _e( 'Name' ); ?></label></td>
-	<td><input type="text" name="newcomment_author" size="30" value="<?php echo esc_attr( $comment->comment_author ); ?>" id="name" /></td>
+    <td class="first"><label for="name"><?php _e( 'Name' ); ?></label></td>
+    <td><input type="text" name="newcomment_author" size="30" value="<?php echo esc_attr( $comment->comment_author ); ?>" id="name" /></td>
 </tr>
 <tr>
-	<td class="first"><label for="email"><?php _e( 'Email' ); ?></label></td>
-	<td>
-		<input type="text" name="newcomment_author_email" size="30" value="<?php echo $comment->comment_author_email; ?>" id="email" />
-	</td>
+    <td class="first"><label for="email"><?php _e( 'Email' ); ?></label></td>
+    <td>
+        <input type="text" name="newcomment_author_email" size="30" value="<?php echo $comment->comment_author_email; ?>" id="email" />
+    </td>
 </tr>
 <tr>
-	<td class="first"><label for="newcomment_author_url"><?php _e( 'URL' ); ?></label></td>
-	<td>
-		<input type="text" id="newcomment_author_url" name="newcomment_author_url" size="30" class="code" value="<?php echo esc_attr( $comment->comment_author_url ); ?>" />
-	</td>
+    <td class="first"><label for="newcomment_author_url"><?php _e( 'URL' ); ?></label></td>
+    <td>
+        <input type="text" id="newcomment_author_url" name="newcomment_author_url" size="30" class="code" value="<?php echo esc_attr( $comment->comment_author_url ); ?>" />
+    </td>
 </tr>
 </tbody>
 </table>
@@ -69,19 +69,19 @@ if ( 'approved' === wp_get_comment_status( $comment ) && $comment->comment_post_
 
 <div id="postdiv" class="postarea">
 <?php
-	echo '<label for="content" class="screen-reader-text">' . __( 'Comment' ) . '</label>';
-	$quicktags_settings = array( 'buttons' => 'strong,em,link,block,del,ins,img,ul,ol,li,code,close' );
-	wp_editor(
-		$comment->comment_content,
-		'content',
-		array(
-			'media_buttons' => false,
-			'tinymce'       => false,
-			'quicktags'     => $quicktags_settings,
-		)
-	);
-	wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
-	?>
+    echo '<label for="content" class="screen-reader-text">' . __( 'Comment' ) . '</label>';
+    $quicktags_settings = array( 'buttons' => 'strong,em,link,block,del,ins,img,ul,ol,li,code,close' );
+    wp_editor(
+        $comment->comment_content,
+        'content',
+        array(
+            'media_buttons' => false,
+            'tinymce'       => false,
+            'quicktags'     => $quicktags_settings,
+        )
+    );
+    wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
+    ?>
 </div>
 </div><!-- /post-body-content -->
 
@@ -98,15 +98,15 @@ if ( 'approved' === wp_get_comment_status( $comment ) && $comment->comment_post_
 <?php _e( 'Status:' ); ?> <span id="comment-status-display">
 <?php
 switch ( $comment->comment_approved ) {
-	case '1':
-		_e( 'Approved' );
-		break;
-	case '0':
-		_e( 'Pending' );
-		break;
-	case 'spam':
-		_e( 'Spam' );
-		break;
+    case '1':
+        _e( 'Approved' );
+        break;
+    case '0':
+        _e( 'Pending' );
+        break;
+    case 'spam':
+        _e( 'Spam' );
+        break;
 }
 ?>
 </span>
@@ -118,16 +118,16 @@ switch ( $comment->comment_approved ) {
 <label><input type="radio"<?php checked( $comment->comment_approved, 'spam' ); ?> name="comment_status" value="spam" /><?php _ex( 'Spam', 'comment status' ); ?></label>
 </fieldset>
 </div><!-- .misc-pub-section -->
-	
+
 <div class="misc-pub-section curtime misc-pub-curtime">
 <?php
 $submitted = sprintf(
-	/* translators: 1: Comment date, 2: Comment time. */
-	__( '%1$s at %2$s' ),
-	/* translators: Publish box date format, see https://www.php.net/date */
-	date_i18n( _x( 'M j, Y', 'publish box date format' ), strtotime( $comment->comment_date ) ),
-	/* translators: Publish box time format, see https://www.php.net/date */
-	date_i18n( _x( 'H:i', 'publish box time format' ), strtotime( $comment->comment_date ) )
+    /* translators: 1: Comment date, 2: Comment time. */
+    __( '%1$s at %2$s' ),
+    /* translators: Publish box date format, see https://www.php.net/date */
+    date_i18n( _x( 'M j, Y', 'publish box date format' ), strtotime( $comment->comment_date ) ),
+    /* translators: Publish box time format, see https://www.php.net/date */
+    date_i18n( _x( 'H:i', 'publish box time format' ), strtotime( $comment->comment_date ) )
 );
 ?>
 <span id="timestamp">
@@ -146,54 +146,54 @@ printf( __( 'Submitted on: %s' ), '<b>' . $submitted . '</b>' );
 <?php
 $post_id = $comment->comment_post_ID;
 if ( current_user_can( 'edit_post', $post_id ) ) {
-	$post_link  = "<a href='" . esc_url( get_edit_post_link( $post_id ) ) . "'>";
-	$post_link .= esc_html( get_the_title( $post_id ) ) . '</a>';
+    $post_link  = "<a href='" . esc_url( get_edit_post_link( $post_id ) ) . "'>";
+    $post_link .= esc_html( get_the_title( $post_id ) ) . '</a>';
 } else {
-	$post_link = esc_html( get_the_title( $post_id ) );
+    $post_link = esc_html( get_the_title( $post_id ) );
 }
 ?>
 
 <div class="misc-pub-section misc-pub-response-to">
-	<?php
-	printf(
-		/* translators: %s: Post link. */
-		__( 'In response to: %s' ),
-		'<b>' . $post_link . '</b>'
-	);
-	?>
+    <?php
+    printf(
+        /* translators: %s: Post link. */
+        __( 'In response to: %s' ),
+        '<b>' . $post_link . '</b>'
+    );
+    ?>
 </div>
 
 <?php
 if ( $comment->comment_parent ) :
-	$parent = get_comment( $comment->comment_parent );
-	if ( $parent ) :
-		$parent_link = esc_url( get_comment_link( $parent ) );
-		$name        = get_comment_author( $parent );
-		?>
-	<div class="misc-pub-section misc-pub-reply-to">
-		<?php
-		printf(
-			/* translators: %s: Comment link. */
-			__( 'In reply to: %s' ),
-			'<b><a href="' . $parent_link . '">' . $name . '</a></b>'
-		);
-		?>
-	</div>
-		<?php
+    $parent = get_comment( $comment->comment_parent );
+    if ( $parent ) :
+        $parent_link = esc_url( get_comment_link( $parent ) );
+        $name        = get_comment_author( $parent );
+        ?>
+    <div class="misc-pub-section misc-pub-reply-to">
+        <?php
+        printf(
+            /* translators: %s: Comment link. */
+            __( 'In reply to: %s' ),
+            '<b><a href="' . $parent_link . '">' . $name . '</a></b>'
+        );
+        ?>
+    </div>
+        <?php
 endif;
 endif;
 ?>
 
 <?php
-	/**
-	 * Filters miscellaneous actions for the edit comment form sidebar.
-	 *
-	 * @since 4.3.0
-	 *
-	 * @param string     $html    Output HTML to display miscellaneous action.
-	 * @param WP_Comment $comment Current comment object.
-	 */
-	echo apply_filters( 'edit_comment_misc_actions', '', $comment );
+    /**
+     * Filters miscellaneous actions for the edit comment form sidebar.
+     *
+     * @since 4.3.0
+     *
+     * @param string     $html    Output HTML to display miscellaneous action.
+     * @param WP_Comment $comment Current comment object.
+     */
+    echo apply_filters( 'edit_comment_misc_actions', '', $comment );
 ?>
 
 </div> <!-- misc actions -->
@@ -249,5 +249,5 @@ $referer = wp_get_referer();
 <script type="text/javascript">
 try{document.post.name.focus();}catch(e){}
 </script>
-	<?php
+    <?php
 endif;

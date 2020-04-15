@@ -24,8 +24,8 @@
  * @return mixed Contents of the query variable.
  */
 function get_query_var( $var, $default = '' ) {
-	global $wp_query;
-	return $wp_query->get( $var, $default );
+    global $wp_query;
+    return $wp_query->get( $var, $default );
 }
 
 /**
@@ -40,8 +40,8 @@ function get_query_var( $var, $default = '' ) {
  * @return object Queried object.
  */
 function get_queried_object() {
-	global $wp_query;
-	return $wp_query->get_queried_object();
+    global $wp_query;
+    return $wp_query->get_queried_object();
 }
 
 /**
@@ -56,8 +56,8 @@ function get_queried_object() {
  * @return int ID of the queried object.
  */
 function get_queried_object_id() {
-	global $wp_query;
-	return $wp_query->get_queried_object_id();
+    global $wp_query;
+    return $wp_query->get_queried_object_id();
 }
 
 /**
@@ -71,8 +71,8 @@ function get_queried_object_id() {
  * @param mixed  $value Query variable value.
  */
 function set_query_var( $var, $value ) {
-	global $wp_query;
-	$wp_query->set( $var, $value );
+    global $wp_query;
+    $wp_query->set( $var, $value );
 }
 
 /**
@@ -94,8 +94,8 @@ function set_query_var( $var, $value ) {
  * @return WP_Post[]|int[] Array of post objects or post IDs.
  */
 function query_posts( $query ) {
-	$GLOBALS['wp_query'] = new WP_Query();
-	return $GLOBALS['wp_query']->query( $query );
+    $GLOBALS['wp_query'] = new WP_Query();
+    return $GLOBALS['wp_query']->query( $query );
 }
 
 /**
@@ -111,8 +111,8 @@ function query_posts( $query ) {
  * @global WP_Query $wp_the_query Copy of the global WP_Query instance created during wp_reset_query().
  */
 function wp_reset_query() {
-	$GLOBALS['wp_query'] = $GLOBALS['wp_the_query'];
-	wp_reset_postdata();
+    $GLOBALS['wp_query'] = $GLOBALS['wp_the_query'];
+    wp_reset_postdata();
 }
 
 /**
@@ -124,11 +124,11 @@ function wp_reset_query() {
  * @global WP_Query $wp_query WordPress Query object.
  */
 function wp_reset_postdata() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( isset( $wp_query ) ) {
-		$wp_query->reset_postdata();
-	}
+    if ( isset( $wp_query ) ) {
+        $wp_query->reset_postdata();
+    }
 }
 
 /*
@@ -151,14 +151,14 @@ function wp_reset_postdata() {
  * @return bool
  */
 function is_archive() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_archive();
+    return $wp_query->is_archive();
 }
 
 /**
@@ -177,14 +177,14 @@ function is_archive() {
  * @return bool
  */
 function is_post_type_archive( $post_types = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_post_type_archive( $post_types );
+    return $wp_query->is_post_type_archive( $post_types );
 }
 
 /**
@@ -203,14 +203,14 @@ function is_post_type_archive( $post_types = '' ) {
  * @return bool
  */
 function is_attachment( $attachment = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_attachment( $attachment );
+    return $wp_query->is_attachment( $attachment );
 }
 
 /**
@@ -232,14 +232,14 @@ function is_attachment( $attachment = '' ) {
  * @return bool
  */
 function is_author( $author = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_author( $author );
+    return $wp_query->is_author( $author );
 }
 
 /**
@@ -261,14 +261,14 @@ function is_author( $author = '' ) {
  * @return bool
  */
 function is_category( $category = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_category( $category );
+    return $wp_query->is_category( $category );
 }
 
 /**
@@ -290,14 +290,14 @@ function is_category( $category = '' ) {
  * @return bool
  */
 function is_tag( $tag = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_tag( $tag );
+    return $wp_query->is_tag( $tag );
 }
 
 /**
@@ -326,14 +326,14 @@ function is_tag( $tag = '' ) {
  *              (category and tag archives).
  */
 function is_tax( $taxonomy = '', $term = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_tax( $taxonomy, $term );
+    return $wp_query->is_tax( $taxonomy, $term );
 }
 
 /**
@@ -350,14 +350,14 @@ function is_tax( $taxonomy = '', $term = '' ) {
  * @return bool
  */
 function is_date() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_date();
+    return $wp_query->is_date();
 }
 
 /**
@@ -376,14 +376,14 @@ function is_date() {
  * @return bool
  */
 function is_day() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_day();
+    return $wp_query->is_day();
 }
 
 /**
@@ -402,14 +402,14 @@ function is_day() {
  * @return bool
  */
 function is_feed( $feeds = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_feed( $feeds );
+    return $wp_query->is_feed( $feeds );
 }
 
 /**
@@ -422,14 +422,14 @@ function is_feed( $feeds = '' ) {
  * @return bool
  */
 function is_comment_feed() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_comment_feed();
+    return $wp_query->is_comment_feed();
 }
 
 /**
@@ -455,14 +455,14 @@ function is_comment_feed() {
  * @return bool True, if front of site.
  */
 function is_front_page() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_front_page();
+    return $wp_query->is_front_page();
 }
 
 /**
@@ -488,14 +488,14 @@ function is_front_page() {
  * @return bool True if blog view homepage, otherwise false.
  */
 function is_home() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_home();
+    return $wp_query->is_home();
 }
 
 /**
@@ -518,14 +518,14 @@ function is_home() {
  * @return bool
  */
 function is_privacy_policy() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_privacy_policy();
+    return $wp_query->is_privacy_policy();
 }
 
 /**
@@ -542,14 +542,14 @@ function is_privacy_policy() {
  * @return bool
  */
 function is_month() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_month();
+    return $wp_query->is_month();
 }
 
 /**
@@ -574,14 +574,14 @@ function is_month() {
  * @return bool Whether the query is for an existing single page.
  */
 function is_page( $page = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_page( $page );
+    return $wp_query->is_page( $page );
 }
 
 /**
@@ -598,14 +598,14 @@ function is_page( $page = '' ) {
  * @return bool
  */
 function is_paged() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_paged();
+    return $wp_query->is_paged();
 }
 
 /**
@@ -622,14 +622,14 @@ function is_paged() {
  * @return bool
  */
 function is_preview() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_preview();
+    return $wp_query->is_preview();
 }
 
 /**
@@ -642,14 +642,14 @@ function is_preview() {
  * @return bool
  */
 function is_robots() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_robots();
+    return $wp_query->is_robots();
 }
 
 /**
@@ -662,14 +662,14 @@ function is_robots() {
  * @return bool
  */
 function is_favicon() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_favicon();
+    return $wp_query->is_favicon();
 }
 
 /**
@@ -686,14 +686,14 @@ function is_favicon() {
  * @return bool
  */
 function is_search() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_search();
+    return $wp_query->is_search();
 }
 
 /**
@@ -720,14 +720,14 @@ function is_search() {
  * @return bool Whether the query is for an existing single post.
  */
 function is_single( $post = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_single( $post );
+    return $wp_query->is_single( $post );
 }
 
 /**
@@ -754,14 +754,14 @@ function is_single( $post = '' ) {
  *              or any of the given post types.
  */
 function is_singular( $post_types = '' ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_singular( $post_types );
+    return $wp_query->is_singular( $post_types );
 }
 
 /**
@@ -778,14 +778,14 @@ function is_singular( $post_types = '' ) {
  * @return bool
  */
 function is_time() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_time();
+    return $wp_query->is_time();
 }
 
 /**
@@ -802,14 +802,14 @@ function is_time() {
  * @return bool
  */
 function is_trackback() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_trackback();
+    return $wp_query->is_trackback();
 }
 
 /**
@@ -826,14 +826,14 @@ function is_trackback() {
  * @return bool
  */
 function is_year() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_year();
+    return $wp_query->is_year();
 }
 
 /**
@@ -850,14 +850,14 @@ function is_year() {
  * @return bool
  */
 function is_404() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_404();
+    return $wp_query->is_404();
 }
 
 /**
@@ -870,14 +870,14 @@ function is_404() {
  * @return bool Whether we're in an embedded post or not.
  */
 function is_embed() {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! isset( $wp_query ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
-		return false;
-	}
+    if ( ! isset( $wp_query ) ) {
+        _doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
+        return false;
+    }
 
-	return $wp_query->is_embed();
+    return $wp_query->is_embed();
 }
 
 /**
@@ -894,20 +894,20 @@ function is_embed() {
  * @return bool
  */
 function is_main_query() {
-	if ( 'pre_get_posts' === current_filter() ) {
-		$message = sprintf(
-			/* translators: 1: pre_get_posts, 2: WP_Query->is_main_query(), 3: is_main_query(), 4: Link to codex is_main_query() page. */
-			__( 'In %1$s, use the %2$s method, not the %3$s function. See %4$s.' ),
-			'<code>pre_get_posts</code>',
-			'<code>WP_Query->is_main_query()</code>',
-			'<code>is_main_query()</code>',
-			__( 'https://codex.wordpress.org/Function_Reference/is_main_query' )
-		);
-		_doing_it_wrong( __FUNCTION__, $message, '3.7.0' );
-	}
+    if ( 'pre_get_posts' === current_filter() ) {
+        $message = sprintf(
+            /* translators: 1: pre_get_posts, 2: WP_Query->is_main_query(), 3: is_main_query(), 4: Link to codex is_main_query() page. */
+            __( 'In %1$s, use the %2$s method, not the %3$s function. See %4$s.' ),
+            '<code>pre_get_posts</code>',
+            '<code>WP_Query->is_main_query()</code>',
+            '<code>is_main_query()</code>',
+            __( 'https://codex.wordpress.org/Function_Reference/is_main_query' )
+        );
+        _doing_it_wrong( __FUNCTION__, $message, '3.7.0' );
+    }
 
-	global $wp_query;
-	return $wp_query->is_main_query();
+    global $wp_query;
+    return $wp_query->is_main_query();
 }
 
 /*
@@ -924,8 +924,8 @@ function is_main_query() {
  * @return bool
  */
 function have_posts() {
-	global $wp_query;
-	return $wp_query->have_posts();
+    global $wp_query;
+    return $wp_query->have_posts();
 }
 
 /**
@@ -942,8 +942,8 @@ function have_posts() {
  * @return bool True if caller is within loop, false if loop hasn't started or ended.
  */
 function in_the_loop() {
-	global $wp_query;
-	return $wp_query->in_the_loop;
+    global $wp_query;
+    return $wp_query->in_the_loop;
 }
 
 /**
@@ -954,8 +954,8 @@ function in_the_loop() {
  * @global WP_Query $wp_query WordPress Query object.
  */
 function rewind_posts() {
-	global $wp_query;
-	$wp_query->rewind_posts();
+    global $wp_query;
+    $wp_query->rewind_posts();
 }
 
 /**
@@ -966,8 +966,8 @@ function rewind_posts() {
  * @global WP_Query $wp_query WordPress Query object.
  */
 function the_post() {
-	global $wp_query;
-	$wp_query->the_post();
+    global $wp_query;
+    $wp_query->the_post();
 }
 
 /*
@@ -984,8 +984,8 @@ function the_post() {
  * @return bool
  */
 function have_comments() {
-	global $wp_query;
-	return $wp_query->have_comments();
+    global $wp_query;
+    return $wp_query->have_comments();
 }
 
 /**
@@ -998,8 +998,8 @@ function have_comments() {
  * @return object
  */
 function the_comment() {
-	global $wp_query;
-	return $wp_query->the_comment();
+    global $wp_query;
+    return $wp_query->the_comment();
 }
 
 /**
@@ -1010,73 +1010,73 @@ function the_comment() {
  * @since 2.1.0
  */
 function wp_old_slug_redirect() {
-	if ( is_404() && '' !== get_query_var( 'name' ) ) {
-		// Guess the current post type based on the query vars.
-		if ( get_query_var( 'post_type' ) ) {
-			$post_type = get_query_var( 'post_type' );
-		} elseif ( get_query_var( 'attachment' ) ) {
-			$post_type = 'attachment';
-		} elseif ( get_query_var( 'pagename' ) ) {
-			$post_type = 'page';
-		} else {
-			$post_type = 'post';
-		}
+    if ( is_404() && '' !== get_query_var( 'name' ) ) {
+        // Guess the current post type based on the query vars.
+        if ( get_query_var( 'post_type' ) ) {
+            $post_type = get_query_var( 'post_type' );
+        } elseif ( get_query_var( 'attachment' ) ) {
+            $post_type = 'attachment';
+        } elseif ( get_query_var( 'pagename' ) ) {
+            $post_type = 'page';
+        } else {
+            $post_type = 'post';
+        }
 
-		if ( is_array( $post_type ) ) {
-			if ( count( $post_type ) > 1 ) {
-				return;
-			}
-			$post_type = reset( $post_type );
-		}
+        if ( is_array( $post_type ) ) {
+            if ( count( $post_type ) > 1 ) {
+                return;
+            }
+            $post_type = reset( $post_type );
+        }
 
-		// Do not attempt redirect for hierarchical post types.
-		if ( is_post_type_hierarchical( $post_type ) ) {
-			return;
-		}
+        // Do not attempt redirect for hierarchical post types.
+        if ( is_post_type_hierarchical( $post_type ) ) {
+            return;
+        }
 
-		$id = _find_post_by_old_slug( $post_type );
+        $id = _find_post_by_old_slug( $post_type );
 
-		if ( ! $id ) {
-			$id = _find_post_by_old_date( $post_type );
-		}
+        if ( ! $id ) {
+            $id = _find_post_by_old_date( $post_type );
+        }
 
-		/**
-		 * Filters the old slug redirect post ID.
-		 *
-		 * @since 4.9.3
-		 *
-		 * @param int $id The redirect post ID.
-		 */
-		$id = apply_filters( 'old_slug_redirect_post_id', $id );
+        /**
+         * Filters the old slug redirect post ID.
+         *
+         * @since 4.9.3
+         *
+         * @param int $id The redirect post ID.
+         */
+        $id = apply_filters( 'old_slug_redirect_post_id', $id );
 
-		if ( ! $id ) {
-			return;
-		}
+        if ( ! $id ) {
+            return;
+        }
 
-		$link = get_permalink( $id );
+        $link = get_permalink( $id );
 
-		if ( get_query_var( 'paged' ) > 1 ) {
-			$link = user_trailingslashit( trailingslashit( $link ) . 'page/' . get_query_var( 'paged' ) );
-		} elseif ( is_embed() ) {
-			$link = user_trailingslashit( trailingslashit( $link ) . 'embed' );
-		}
+        if ( get_query_var( 'paged' ) > 1 ) {
+            $link = user_trailingslashit( trailingslashit( $link ) . 'page/' . get_query_var( 'paged' ) );
+        } elseif ( is_embed() ) {
+            $link = user_trailingslashit( trailingslashit( $link ) . 'embed' );
+        }
 
-		/**
-		 * Filters the old slug redirect URL.
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param string $link The redirect URL.
-		 */
-		$link = apply_filters( 'old_slug_redirect_url', $link );
+        /**
+         * Filters the old slug redirect URL.
+         *
+         * @since 4.4.0
+         *
+         * @param string $link The redirect URL.
+         */
+        $link = apply_filters( 'old_slug_redirect_url', $link );
 
-		if ( ! $link ) {
-			return;
-		}
+        if ( ! $link ) {
+            return;
+        }
 
-		wp_redirect( $link, 301 ); // Permanent redirect.
-		exit;
-	}
+        wp_redirect( $link, 301 ); // Permanent redirect.
+        exit;
+    }
 }
 
 /**
@@ -1093,25 +1093,25 @@ function wp_old_slug_redirect() {
  * @return int $id The Post ID.
  */
 function _find_post_by_old_slug( $post_type ) {
-	global $wpdb;
+    global $wpdb;
 
-	$query = $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta, $wpdb->posts WHERE ID = post_id AND post_type = %s AND meta_key = '_wp_old_slug' AND meta_value = %s", $post_type, get_query_var( 'name' ) );
+    $query = $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta, $wpdb->posts WHERE ID = post_id AND post_type = %s AND meta_key = '_wp_old_slug' AND meta_value = %s", $post_type, get_query_var( 'name' ) );
 
-	// If year, monthnum, or day have been specified, make our query more precise
-	// just in case there are multiple identical _wp_old_slug values.
-	if ( get_query_var( 'year' ) ) {
-		$query .= $wpdb->prepare( ' AND YEAR(post_date) = %d', get_query_var( 'year' ) );
-	}
-	if ( get_query_var( 'monthnum' ) ) {
-		$query .= $wpdb->prepare( ' AND MONTH(post_date) = %d', get_query_var( 'monthnum' ) );
-	}
-	if ( get_query_var( 'day' ) ) {
-		$query .= $wpdb->prepare( ' AND DAYOFMONTH(post_date) = %d', get_query_var( 'day' ) );
-	}
+    // If year, monthnum, or day have been specified, make our query more precise
+    // just in case there are multiple identical _wp_old_slug values.
+    if ( get_query_var( 'year' ) ) {
+        $query .= $wpdb->prepare( ' AND YEAR(post_date) = %d', get_query_var( 'year' ) );
+    }
+    if ( get_query_var( 'monthnum' ) ) {
+        $query .= $wpdb->prepare( ' AND MONTH(post_date) = %d', get_query_var( 'monthnum' ) );
+    }
+    if ( get_query_var( 'day' ) ) {
+        $query .= $wpdb->prepare( ' AND DAYOFMONTH(post_date) = %d', get_query_var( 'day' ) );
+    }
 
-	$id = (int) $wpdb->get_var( $query );
+    $id = (int) $wpdb->get_var( $query );
 
-	return $id;
+    return $id;
 }
 
 /**
@@ -1128,30 +1128,30 @@ function _find_post_by_old_slug( $post_type ) {
  * @return int $id The Post ID.
  */
 function _find_post_by_old_date( $post_type ) {
-	global $wpdb;
+    global $wpdb;
 
-	$date_query = '';
-	if ( get_query_var( 'year' ) ) {
-		$date_query .= $wpdb->prepare( ' AND YEAR(pm_date.meta_value) = %d', get_query_var( 'year' ) );
-	}
-	if ( get_query_var( 'monthnum' ) ) {
-		$date_query .= $wpdb->prepare( ' AND MONTH(pm_date.meta_value) = %d', get_query_var( 'monthnum' ) );
-	}
-	if ( get_query_var( 'day' ) ) {
-		$date_query .= $wpdb->prepare( ' AND DAYOFMONTH(pm_date.meta_value) = %d', get_query_var( 'day' ) );
-	}
+    $date_query = '';
+    if ( get_query_var( 'year' ) ) {
+        $date_query .= $wpdb->prepare( ' AND YEAR(pm_date.meta_value) = %d', get_query_var( 'year' ) );
+    }
+    if ( get_query_var( 'monthnum' ) ) {
+        $date_query .= $wpdb->prepare( ' AND MONTH(pm_date.meta_value) = %d', get_query_var( 'monthnum' ) );
+    }
+    if ( get_query_var( 'day' ) ) {
+        $date_query .= $wpdb->prepare( ' AND DAYOFMONTH(pm_date.meta_value) = %d', get_query_var( 'day' ) );
+    }
 
-	$id = 0;
-	if ( $date_query ) {
-		$id = (int) $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta AS pm_date, $wpdb->posts WHERE ID = post_id AND post_type = %s AND meta_key = '_wp_old_date' AND post_name = %s" . $date_query, $post_type, get_query_var( 'name' ) ) );
+    $id = 0;
+    if ( $date_query ) {
+        $id = (int) $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta AS pm_date, $wpdb->posts WHERE ID = post_id AND post_type = %s AND meta_key = '_wp_old_date' AND post_name = %s" . $date_query, $post_type, get_query_var( 'name' ) ) );
 
-		if ( ! $id ) {
-			// Check to see if an old slug matches the old date.
-			$id = (int) $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts, $wpdb->postmeta AS pm_slug, $wpdb->postmeta AS pm_date WHERE ID = pm_slug.post_id AND ID = pm_date.post_id AND post_type = %s AND pm_slug.meta_key = '_wp_old_slug' AND pm_slug.meta_value = %s AND pm_date.meta_key = '_wp_old_date'" . $date_query, $post_type, get_query_var( 'name' ) ) );
-		}
-	}
+        if ( ! $id ) {
+            // Check to see if an old slug matches the old date.
+            $id = (int) $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts, $wpdb->postmeta AS pm_slug, $wpdb->postmeta AS pm_date WHERE ID = pm_slug.post_id AND ID = pm_date.post_id AND post_type = %s AND pm_slug.meta_key = '_wp_old_slug' AND pm_slug.meta_value = %s AND pm_date.meta_key = '_wp_old_date'" . $date_query, $post_type, get_query_var( 'name' ) ) );
+        }
+    }
 
-	return $id;
+    return $id;
 }
 
 /**
@@ -1166,13 +1166,13 @@ function _find_post_by_old_date( $post_type ) {
  * @return bool True when finished.
  */
 function setup_postdata( $post ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! empty( $wp_query ) && $wp_query instanceof WP_Query ) {
-		return $wp_query->setup_postdata( $post );
-	}
+    if ( ! empty( $wp_query ) && $wp_query instanceof WP_Query ) {
+        return $wp_query->setup_postdata( $post );
+    }
 
-	return false;
+    return false;
 }
 
 /**
@@ -1186,11 +1186,11 @@ function setup_postdata( $post ) {
  * @return array|bool Elements of post, or false on failure.
  */
 function generate_postdata( $post ) {
-	global $wp_query;
+    global $wp_query;
 
-	if ( ! empty( $wp_query ) && $wp_query instanceof WP_Query ) {
-		return $wp_query->generate_postdata( $post );
-	}
+    if ( ! empty( $wp_query ) && $wp_query instanceof WP_Query ) {
+        return $wp_query->generate_postdata( $post );
+    }
 
-	return false;
+    return false;
 }

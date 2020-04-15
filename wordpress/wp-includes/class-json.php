@@ -139,8 +139,8 @@ class Services_JSON
     *                                   bubble up with an error, so all return values
     *                                   from encode() should be checked with isError()
     *                           - SERVICES_JSON_USE_TO_JSON:  call toJSON when serializing objects
-    *                                   It serializes the return value from the toJSON call rather 
-    *                                   than the object itself, toJSON can return associative arrays, 
+    *                                   It serializes the return value from the toJSON call rather
+    *                                   than the object itself, toJSON can return associative arrays,
     *                                   strings or numbers, if you return an object, make sure it does
     *                                   not have a toJSON method, otherwise an error will occur.
     */
@@ -154,22 +154,22 @@ class Services_JSON
         $this->_mb_substr            = function_exists('mb_substr');
     }
 
-	/**
-	 * PHP4 constructor.
+    /**
+     * PHP4 constructor.
      *
      * @deprecated 5.3.0 Use __construct() instead.
      *
      * @see Services_JSON::__construct()
-	 */
-	public function Services_JSON( $use = 0 ) {
-		_deprecated_constructor( 'Services_JSON', '5.3.0', get_class( $this ) );
-		self::__construct( $use );
-	}
+     */
+    public function Services_JSON( $use = 0 ) {
+        _deprecated_constructor( 'Services_JSON', '5.3.0', get_class( $this ) );
+        self::__construct( $use );
+    }
     // private - cache the mbstring lookup results..
     var $_mb_strlen = false;
     var $_mb_substr = false;
     var $_mb_convert_encoding = false;
-    
+
    /**
     * convert a string from one UTF-16 char to one UTF-8 char
     *
@@ -309,10 +309,10 @@ class Services_JSON
         $ret = $this->_encode($var);
         setlocale(LC_NUMERIC, $lc);
         return $ret;
-        
+
     }
     /**
-    * PRIVATE CODE that does the work of encodes an arbitrary variable into JSON format 
+    * PRIVATE CODE that does the work of encodes an arbitrary variable into JSON format
     *
     * @deprecated 5.3.0 Use the PHP native JSON extension instead.
     *
@@ -324,7 +324,7 @@ class Services_JSON
     * @return   mixed   JSON string representation of input var or an error if a problem occurs
     * @access   public
     */
-    function _encode($var) 
+    function _encode($var)
     {
         _deprecated_function( __METHOD__, '5.3.0', 'The PHP native JSON extension' );
 
@@ -392,7 +392,7 @@ class Services_JSON
                                 $ascii .= '?';
                                 break;
                             }
-                            
+
                             $char = pack('C*', $ord_var_c, ord($var[$c + 1]));
                             $c += 1;
                             $utf16 = $this->utf82utf16($char);
@@ -518,27 +518,27 @@ class Services_JSON
                 return '[' . join(',', $elements) . ']';
 
             case 'object':
-            
+
                 // support toJSON methods.
                 if (($this->use & SERVICES_JSON_USE_TO_JSON) && method_exists($var, 'toJSON')) {
                     // this may end up allowing unlimited recursion
                     // so we check the return value to make sure it's not got the same method.
                     $recode = $var->toJSON();
-                    
+
                     if (method_exists($recode, 'toJSON')) {
-                        
+
                         return ($this->use & SERVICES_JSON_SUPPRESS_ERRORS)
                         ? 'null'
                         : new Services_JSON_Error(get_class($var).
                             " toJSON returned an object with a toJSON method.");
-                            
+
                     }
-                    
+
                     return $this->_encode( $recode );
-                } 
-                
+                }
+
                 $vars = get_object_vars($var);
-                
+
                 $properties = array_map(array($this, 'name_value'),
                                         array_keys($vars),
                                         array_values($vars));
@@ -814,7 +814,7 @@ class Services_JSON
                                 // element in an associative array,
                                 // for now
                                 $parts = array();
-                                
+
                                if (preg_match('/^\s*(["\'].*[^\\\]["\'])\s*:/Uis', $slice, $parts)) {
                                     // "name":value pair
                                     $key = $this->decode($parts[1]);
@@ -925,7 +925,7 @@ class Services_JSON
 
         return false;
     }
-    
+
     /**
      * Calculates length of string in bytes
      *
@@ -934,7 +934,7 @@ class Services_JSON
      * @param string
      * @return integer length
      */
-    function strlen8( $str ) 
+    function strlen8( $str )
     {
         _deprecated_function( __METHOD__, '5.3.0', 'The PHP native JSON extension' );
 
@@ -943,7 +943,7 @@ class Services_JSON
         }
         return strlen( $str );
     }
-    
+
     /**
      * Returns part of a string, interpreting $start and $length as number of bytes.
      *
@@ -954,7 +954,7 @@ class Services_JSON
      * @param integer length
      * @return integer length
      */
-    function substr8( $string, $start, $length=false ) 
+    function substr8( $string, $start, $length=false )
     {
         _deprecated_function( __METHOD__, '5.3.0', 'The PHP native JSON extension' );
 
@@ -973,11 +973,11 @@ if (class_exists('PEAR_Error')) {
 
     class Services_JSON_Error extends PEAR_Error
     {
-	    /**
-	     * PHP5 constructor.
-	     *
-	     * @deprecated 5.3.0 Use the PHP native JSON extension instead.
-	     */
+        /**
+         * PHP5 constructor.
+         *
+         * @deprecated 5.3.0 Use the PHP native JSON extension instead.
+         */
         function __construct($message = 'unknown error', $code = null,
                                      $mode = null, $options = null, $userinfo = null)
         {
@@ -986,18 +986,18 @@ if (class_exists('PEAR_Error')) {
             parent::PEAR_Error($message, $code, $mode, $options, $userinfo);
         }
 
-	    /**
-	     * PHP4 constructor.
-	     *
-	     * @deprecated 5.3.0 Use __construct() instead.
-	     *
-	     * @see Services_JSON_Error::__construct()
-	     */
-		public function Services_JSON_Error($message = 'unknown error', $code = null,
+        /**
+         * PHP4 constructor.
+         *
+         * @deprecated 5.3.0 Use __construct() instead.
+         *
+         * @see Services_JSON_Error::__construct()
+         */
+        public function Services_JSON_Error($message = 'unknown error', $code = null,
                                      $mode = null, $options = null, $userinfo = null) {
-			_deprecated_constructor( 'Services_JSON_Error', '5.3.0', get_class( $this ) );
-			self::__construct($message, $code, $mode, $options, $userinfo);
-		}
+            _deprecated_constructor( 'Services_JSON_Error', '5.3.0', get_class( $this ) );
+            self::__construct($message, $code, $mode, $options, $userinfo);
+        }
     }
 
 } else {
@@ -1007,29 +1007,29 @@ if (class_exists('PEAR_Error')) {
      */
     class Services_JSON_Error
     {
-	    /**
-	     * PHP5 constructor.
-	     *
-	     * @deprecated 5.3.0 Use the PHP native JSON extension instead.
-	     */
+        /**
+         * PHP5 constructor.
+         *
+         * @deprecated 5.3.0 Use the PHP native JSON extension instead.
+         */
         function __construct( $message = 'unknown error', $code = null,
                                      $mode = null, $options = null, $userinfo = null )
         {
             _deprecated_function( __METHOD__, '5.3.0', 'The PHP native JSON extension' );
         }
 
-	    /**
-	     * PHP4 constructor.
-	     *
-	     * @deprecated 5.3.0 Use __construct() instead.
-	     *
-	     * @see Services_JSON_Error::__construct()
-	     */
-		public function Services_JSON_Error( $message = 'unknown error', $code = null,
-	                                     $mode = null, $options = null, $userinfo = null ) {
-			_deprecated_constructor( 'Services_JSON_Error', '5.3.0', get_class( $this ) );
-			self::__construct( $message, $code, $mode, $options, $userinfo );
-		}
+        /**
+         * PHP4 constructor.
+         *
+         * @deprecated 5.3.0 Use __construct() instead.
+         *
+         * @see Services_JSON_Error::__construct()
+         */
+        public function Services_JSON_Error( $message = 'unknown error', $code = null,
+                                         $mode = null, $options = null, $userinfo = null ) {
+            _deprecated_constructor( 'Services_JSON_Error', '5.3.0', get_class( $this ) );
+            self::__construct( $message, $code, $mode, $options, $userinfo );
+        }
     }
 
 }

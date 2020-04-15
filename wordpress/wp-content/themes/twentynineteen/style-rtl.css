@@ -28,31 +28,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Variables
 # Normalize
 # Typography
-	## Headings
-	## Copy
+    ## Headings
+    ## Copy
 # Elements
-	## Lists
-	## Tables
+    ## Lists
+    ## Tables
 # Forms
-	## Buttons
-	## Fields
+    ## Buttons
+    ## Fields
 # Navigation
-	## Links
-	## Menus
-	## Next & Previous
+    ## Links
+    ## Menus
+    ## Next & Previous
 # Accessibility
 # Alignments
 # Clearings
 # Layout
 # Widgets
 # Content
-	## Archives
-	## Posts and pages
-	## Comments
+    ## Archives
+    ## Posts and pages
+    ## Comments
 # Blocks
 # Media
-	## Captions
-	## Galleries
+    ## Captions
+    ## Galleries
 --------------------------------------------------------------*/
 /*
  * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
@@ -1874,7 +1874,7 @@ input:lang(vi)[type="submit"], .comment-navigation .nav-previous:lang(vi),
 /* Normalize */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -1887,7 +1887,7 @@ html {
 }
 
 /* Sections
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * Remove the margin in all browsers.
  */
@@ -1905,7 +1905,7 @@ h1 {
 }
 
 /* Grouping content
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -1931,7 +1931,7 @@ pre {
 }
 
 /* Text-level semantics
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -2001,7 +2001,7 @@ sup {
 }
 
 /* Embedded content
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -2010,7 +2010,7 @@ img {
 }
 
 /* Forms
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -2092,7 +2092,7 @@ fieldset {
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
+ *        `fieldset` elements in all browsers.
  */
 legend {
   box-sizing: border-box;
@@ -2173,7 +2173,7 @@ textarea {
 }
 
 /* Interactive
-	 ========================================================================== */
+     ========================================================================== */
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -2189,7 +2189,7 @@ summary {
 }
 
 /* Misc
-	 ========================================================================== */
+     ========================================================================== */
 /**
  * Add the correct display in IE 10+.
  */
@@ -2753,17 +2753,17 @@ a:focus {
   margin-top: 0.25rem;
   /* Un-style buttons */
   /*
-	 * Sub-menu styles
-	 *
-	 * :focus-within needs its own selector so other similar
-	 * selectors don’t get ignored if a browser doesn’t recognize it
-	 */
+     * Sub-menu styles
+     *
+     * :focus-within needs its own selector so other similar
+     * selectors don’t get ignored if a browser doesn’t recognize it
+     */
   /**
-	 * Fade-in animation for top-level submenus
-	 */
+     * Fade-in animation for top-level submenus
+     */
   /**
-	 * Off-canvas touch device styles
-	 */
+     * Off-canvas touch device styles
+     */
 }
 
 body.page .main-navigation {
@@ -4120,9 +4120,9 @@ body.page .main-navigation {
 .site-header.featured-image:after {
   background: #000;
   /**
-		 * Add a transition to the readability overlay, to add a subtle
-		 * but smooth effect when resizing the screen.
-		 */
+         * Add a transition to the readability overlay, to add a subtle
+         * but smooth effect when resizing the screen.
+         */
   transition: opacity 1200ms ease-in-out;
   opacity: 0.7;
   z-index: 5;
@@ -4528,8 +4528,8 @@ body.page .main-navigation {
   margin: calc(2 * 1rem) 1rem;
   word-wrap: break-word;
   /* Add extra margin when the comments section is located immediately after the
-	 * post itself (this happens on pages).
-	 */
+     * post itself (this happens on pages).
+     */
 }
 
 @media only screen and (min-width: 768px) {
@@ -5638,9 +5638,9 @@ body.page .main-navigation {
   text-transform: none;
   color: #767676;
   /*
-			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
-			 */
+             * This requires a rem-based font size calculation instead of our normal em-based one,
+             * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
+             */
   font-size: calc(1rem / (1.25 * 1.125));
 }
 
@@ -5742,9 +5742,9 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-quote cite {
   /*
-			 * This requires a rem-based font size calculation instead of our normal em-based one,
-			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
-			 */
+             * This requires a rem-based font size calculation instead of our normal em-based one,
+             * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
+             */
   font-size: calc(1rem / (1.25 * 1.125));
 }
 
@@ -5764,9 +5764,9 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-quote.is-large footer, .entry .entry-content .wp-block-quote.is-style-large cite,
 .entry .entry-content .wp-block-quote.is-style-large footer {
   /*
-				 * This requires a rem-based font size calculation instead of our normal em-based one,
-				 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
-				 */
+                 * This requires a rem-based font size calculation instead of our normal em-based one,
+                 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
+                 */
   font-size: calc(1rem / (1.25 * 1.125));
 }
 
@@ -5973,7 +5973,7 @@ body.page .main-navigation {
   max-width: 2.25em;
   text-align: right;
   /* Remove duplicate rule-line when a separator
-		 * is followed by an H1, or H2 */
+         * is followed by an H1, or H2 */
 }
 
 .entry .entry-content .wp-block-separator.is-style-wide,

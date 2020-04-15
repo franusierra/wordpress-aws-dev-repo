@@ -1,88 +1,88 @@
 this["wp"] = this["wp"] || {}; this["wp"]["i18n"] =
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/     // The module cache
+/******/     var installedModules = {};
 /******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
+/******/     // The require function
+/******/     function __webpack_require__(moduleId) {
 /******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
+/******/         // Check if module is in cache
+/******/         if(installedModules[moduleId]) {
+/******/             return installedModules[moduleId].exports;
+/******/         }
+/******/         // Create a new module (and put it into the cache)
+/******/         var module = installedModules[moduleId] = {
+/******/             i: moduleId,
+/******/             l: false,
+/******/             exports: {}
+/******/         };
 /******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/         // Execute the module function
+/******/         modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
+/******/         // Flag the module as loaded
+/******/         module.l = true;
 /******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/         // Return the exports of the module
+/******/         return module.exports;
+/******/     }
 /******/
 /******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 442);
+/******/     // expose the modules object (__webpack_modules__)
+/******/     __webpack_require__.m = modules;
+/******/
+/******/     // expose the module cache
+/******/     __webpack_require__.c = installedModules;
+/******/
+/******/     // define getter function for harmony exports
+/******/     __webpack_require__.d = function(exports, name, getter) {
+/******/         if(!__webpack_require__.o(exports, name)) {
+/******/             Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/         }
+/******/     };
+/******/
+/******/     // define __esModule on exports
+/******/     __webpack_require__.r = function(exports) {
+/******/         if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/             Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/         }
+/******/         Object.defineProperty(exports, '__esModule', { value: true });
+/******/     };
+/******/
+/******/     // create a fake namespace object
+/******/     // mode & 1: value is a module id, require it
+/******/     // mode & 2: merge all properties of value into the ns
+/******/     // mode & 4: return value when already ns object
+/******/     // mode & 8|1: behave like require
+/******/     __webpack_require__.t = function(value, mode) {
+/******/         if(mode & 1) value = __webpack_require__(value);
+/******/         if(mode & 8) return value;
+/******/         if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/         var ns = Object.create(null);
+/******/         __webpack_require__.r(ns);
+/******/         Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/         if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/         return ns;
+/******/     };
+/******/
+/******/     // getDefaultExport function for compatibility with non-harmony modules
+/******/     __webpack_require__.n = function(module) {
+/******/         var getter = module && module.__esModule ?
+/******/             function getDefault() { return module['default']; } :
+/******/             function getModuleExports() { return module; };
+/******/         __webpack_require__.d(getter, 'a', getter);
+/******/         return getter;
+/******/     };
+/******/
+/******/     // Object.prototype.hasOwnProperty.call
+/******/     __webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/     // __webpack_public_path__
+/******/     __webpack_require__.p = "";
+/******/
+/******/
+/******/     // Load entry module and return exports
+/******/     return __webpack_require__(__webpack_require__.s = 442);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -317,7 +317,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/* global window, exports, define */
                     'vsprintf': vsprintf
                 }
             }).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+                __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
         }
     }
     /* eslint-enable quote-props */
@@ -344,23 +344,23 @@ var PRECEDENCE, OPENERS, TERMINATORS, PATTERN;
  * @type {Object}
  */
 PRECEDENCE = {
-	'(': 9,
-	'!': 8,
-	'*': 7,
-	'/': 7,
-	'%': 7,
-	'+': 6,
-	'-': 6,
-	'<': 5,
-	'<=': 5,
-	'>': 5,
-	'>=': 5,
-	'==': 4,
-	'!=': 4,
-	'&&': 3,
-	'||': 2,
-	'?': 1,
-	'?:': 1,
+    '(': 9,
+    '!': 8,
+    '*': 7,
+    '/': 7,
+    '%': 7,
+    '+': 6,
+    '-': 6,
+    '<': 5,
+    '<=': 5,
+    '>': 5,
+    '>=': 5,
+    '==': 4,
+    '!=': 4,
+    '&&': 3,
+    '||': 2,
+    '?': 1,
+    '?:': 1,
 };
 
 /**
@@ -378,8 +378,8 @@ OPENERS = [ '(', '?' ];
  * @type {string[]}
  */
 TERMINATORS = {
-	')': [ '(' ],
-	':': [ '?', '?:' ],
+    ')': [ '(' ],
+    ':': [ '?', '?:' ],
 };
 
 /**
@@ -409,56 +409,56 @@ PATTERN = /<=|>=|==|!=|&&|\|\||\?:|\(|!|\*|\/|%|\+|-|<|>|\?|\)|:/;
  * @return {string[]} Postfix terms.
  */
 function postfix( expression ) {
-	var terms = [],
-		stack = [],
-		match, operator, term, element;
+    var terms = [],
+        stack = [],
+        match, operator, term, element;
 
-	while ( ( match = expression.match( PATTERN ) ) ) {
-		operator = match[ 0 ];
+    while ( ( match = expression.match( PATTERN ) ) ) {
+        operator = match[ 0 ];
 
-		// Term is the string preceding the operator match. It may contain
-		// whitespace, and may be empty (if operator is at beginning).
-		term = expression.substr( 0, match.index ).trim();
-		if ( term ) {
-			terms.push( term );
-		}
+        // Term is the string preceding the operator match. It may contain
+        // whitespace, and may be empty (if operator is at beginning).
+        term = expression.substr( 0, match.index ).trim();
+        if ( term ) {
+            terms.push( term );
+        }
 
-		while ( ( element = stack.pop() ) ) {
-			if ( TERMINATORS[ operator ] ) {
-				if ( TERMINATORS[ operator ][ 0 ] === element ) {
-					// Substitution works here under assumption that because
-					// the assigned operator will no longer be a terminator, it
-					// will be pushed to the stack during the condition below.
-					operator = TERMINATORS[ operator ][ 1 ] || operator;
-					break;
-				}
-			} else if ( OPENERS.indexOf( element ) >= 0 || PRECEDENCE[ element ] < PRECEDENCE[ operator ] ) {
-				// Push to stack if either an opener or when pop reveals an
-				// element of lower precedence.
-				stack.push( element );
-				break;
-			}
+        while ( ( element = stack.pop() ) ) {
+            if ( TERMINATORS[ operator ] ) {
+                if ( TERMINATORS[ operator ][ 0 ] === element ) {
+                    // Substitution works here under assumption that because
+                    // the assigned operator will no longer be a terminator, it
+                    // will be pushed to the stack during the condition below.
+                    operator = TERMINATORS[ operator ][ 1 ] || operator;
+                    break;
+                }
+            } else if ( OPENERS.indexOf( element ) >= 0 || PRECEDENCE[ element ] < PRECEDENCE[ operator ] ) {
+                // Push to stack if either an opener or when pop reveals an
+                // element of lower precedence.
+                stack.push( element );
+                break;
+            }
 
-			// For each popped from stack, push to terms.
-			terms.push( element );
-		}
+            // For each popped from stack, push to terms.
+            terms.push( element );
+        }
 
-		if ( ! TERMINATORS[ operator ] ) {
-			stack.push( operator );
-		}
+        if ( ! TERMINATORS[ operator ] ) {
+            stack.push( operator );
+        }
 
-		// Slice matched fragment from expression to continue match.
-		expression = expression.substr( match.index + operator.length );
-	}
+        // Slice matched fragment from expression to continue match.
+        expression = expression.substr( match.index + operator.length );
+    }
 
-	// Push remainder of operand, if exists, to terms.
-	expression = expression.trim();
-	if ( expression ) {
-		terms.push( expression );
-	}
+    // Push remainder of operand, if exists, to terms.
+    expression = expression.trim();
+    if ( expression ) {
+        terms.push( expression );
+    }
 
-	// Pop remaining items from stack into terms.
-	return terms.concat( stack.reverse() );
+    // Pop remaining items from stack into terms.
+    return terms.concat( stack.reverse() );
 }
 
 // CONCATENATED MODULE: ./node_modules/@tannin/evaluate/index.js
@@ -468,55 +468,55 @@ function postfix( expression ) {
  * @type {Object}
  */
 var OPERATORS = {
-	'!': function( a ) {
-		return ! a;
-	},
-	'*': function( a, b ) {
-		return a * b;
-	},
-	'/': function( a, b ) {
-		return a / b;
-	},
-	'%': function( a, b ) {
-		return a % b;
-	},
-	'+': function( a, b ) {
-		return a + b;
-	},
-	'-': function( a, b ) {
-		return a - b;
-	},
-	'<': function( a, b ) {
-		return a < b;
-	},
-	'<=': function( a, b ) {
-		return a <= b;
-	},
-	'>': function( a, b ) {
-		return a > b;
-	},
-	'>=': function( a, b ) {
-		return a >= b;
-	},
-	'==': function( a, b ) {
-		return a === b;
-	},
-	'!=': function( a, b ) {
-		return a !== b;
-	},
-	'&&': function( a, b ) {
-		return a && b;
-	},
-	'||': function( a, b ) {
-		return a || b;
-	},
-	'?:': function( a, b, c ) {
-		if ( a ) {
-			throw b;
-		}
+    '!': function( a ) {
+        return ! a;
+    },
+    '*': function( a, b ) {
+        return a * b;
+    },
+    '/': function( a, b ) {
+        return a / b;
+    },
+    '%': function( a, b ) {
+        return a % b;
+    },
+    '+': function( a, b ) {
+        return a + b;
+    },
+    '-': function( a, b ) {
+        return a - b;
+    },
+    '<': function( a, b ) {
+        return a < b;
+    },
+    '<=': function( a, b ) {
+        return a <= b;
+    },
+    '>': function( a, b ) {
+        return a > b;
+    },
+    '>=': function( a, b ) {
+        return a >= b;
+    },
+    '==': function( a, b ) {
+        return a === b;
+    },
+    '!=': function( a, b ) {
+        return a !== b;
+    },
+    '&&': function( a, b ) {
+        return a && b;
+    },
+    '||': function( a, b ) {
+        return a || b;
+    },
+    '?:': function( a, b, c ) {
+        if ( a ) {
+            throw b;
+        }
 
-		return c;
-	},
+        return c;
+    },
 };
 
 /**
@@ -541,36 +541,36 @@ var OPERATORS = {
  * @return {*} Result of evaluation.
  */
 function evaluate_evaluate( postfix, variables ) {
-	var stack = [],
-		i, j, args, getOperatorResult, term, value;
+    var stack = [],
+        i, j, args, getOperatorResult, term, value;
 
-	for ( i = 0; i < postfix.length; i++ ) {
-		term = postfix[ i ];
+    for ( i = 0; i < postfix.length; i++ ) {
+        term = postfix[ i ];
 
-		getOperatorResult = OPERATORS[ term ];
-		if ( getOperatorResult ) {
-			// Pop from stack by number of function arguments.
-			j = getOperatorResult.length;
-			args = Array( j );
-			while ( j-- ) {
-				args[ j ] = stack.pop();
-			}
+        getOperatorResult = OPERATORS[ term ];
+        if ( getOperatorResult ) {
+            // Pop from stack by number of function arguments.
+            j = getOperatorResult.length;
+            args = Array( j );
+            while ( j-- ) {
+                args[ j ] = stack.pop();
+            }
 
-			try {
-				value = getOperatorResult.apply( null, args );
-			} catch ( earlyReturn ) {
-				return earlyReturn;
-			}
-		} else if ( variables.hasOwnProperty( term ) ) {
-			value = variables[ term ];
-		} else {
-			value = +term;
-		}
+            try {
+                value = getOperatorResult.apply( null, args );
+            } catch ( earlyReturn ) {
+                return earlyReturn;
+            }
+        } else if ( variables.hasOwnProperty( term ) ) {
+            value = variables[ term ];
+        } else {
+            value = +term;
+        }
 
-		stack.push( value );
-	}
+        stack.push( value );
+    }
 
-	return stack[ 0 ];
+    return stack[ 0 ];
 }
 
 // CONCATENATED MODULE: ./node_modules/@tannin/compile/index.js
@@ -597,11 +597,11 @@ function evaluate_evaluate( postfix, variables ) {
  * @return {(variables?:{[variable:string]:*})=>*} Compiled evaluator.
  */
 function compile( expression ) {
-	var terms = postfix( expression );
+    var terms = postfix( expression );
 
-	return function( variables ) {
-		return evaluate_evaluate( terms, variables );
-	};
+    return function( variables ) {
+        return evaluate_evaluate( terms, variables );
+    };
 }
 
 // CONCATENATED MODULE: ./node_modules/@tannin/plural-forms/index.js
@@ -617,11 +617,11 @@ function compile( expression ) {
  * @return {Function} Evaluator function.
  */
 function pluralForms( expression ) {
-	var evaluate = compile( expression );
+    var evaluate = compile( expression );
 
-	return function( n ) {
-		return +evaluate( { n: n } );
-	};
+    return function( n ) {
+        return +evaluate( { n: n } );
+    };
 }
 
 // CONCATENATED MODULE: ./node_modules/tannin/index.js
@@ -676,8 +676,8 @@ function pluralForms( expression ) {
  * @type {TanninOptions}
  */
 var DEFAULT_OPTIONS = {
-	contextDelimiter: '\u0004',
-	onMissingKey: null,
+    contextDelimiter: '\u0004',
+    onMissingKey: null,
 };
 
 /**
@@ -695,16 +695,16 @@ var DEFAULT_OPTIONS = {
  * @return {string} Plural forms expression.
  */
 function getPluralExpression( pf ) {
-	var parts, i, part;
+    var parts, i, part;
 
-	parts = pf.split( ';' );
+    parts = pf.split( ';' );
 
-	for ( i = 0; i < parts.length; i++ ) {
-		part = parts[ i ].trim();
-		if ( part.indexOf( 'plural=' ) === 0 ) {
-			return part.substr( 7 );
-		}
-	}
+    for ( i = 0; i < parts.length; i++ ) {
+        part = parts[ i ].trim();
+        if ( part.indexOf( 'plural=' ) === 0 ) {
+            return part.substr( 7 );
+        }
+    }
 }
 
 /**
@@ -716,37 +716,37 @@ function getPluralExpression( pf ) {
  * @param {TanninOptions}    [options] Tannin options.
  */
 function Tannin( data, options ) {
-	var key;
+    var key;
 
-	/**
-	 * Jed-formatted locale data.
-	 *
-	 * @name Tannin#data
-	 * @type {TanninLocaleData}
-	 */
-	this.data = data;
+    /**
+     * Jed-formatted locale data.
+     *
+     * @name Tannin#data
+     * @type {TanninLocaleData}
+     */
+    this.data = data;
 
-	/**
-	 * Plural forms function cache, keyed by plural forms string.
-	 *
-	 * @name Tannin#pluralForms
-	 * @type {Object<string,Function>}
-	 */
-	this.pluralForms = {};
+    /**
+     * Plural forms function cache, keyed by plural forms string.
+     *
+     * @name Tannin#pluralForms
+     * @type {Object<string,Function>}
+     */
+    this.pluralForms = {};
 
-	/**
-	 * Effective options for instance, including defaults.
-	 *
-	 * @name Tannin#options
-	 * @type {TanninOptions}
-	 */
-	this.options = {};
+    /**
+     * Effective options for instance, including defaults.
+     *
+     * @name Tannin#options
+     * @type {TanninOptions}
+     */
+    this.options = {};
 
-	for ( key in DEFAULT_OPTIONS ) {
-		this.options[ key ] = options !== undefined && key in options
-			? options[ key ]
-			: DEFAULT_OPTIONS[ key ];
-	}
+    for ( key in DEFAULT_OPTIONS ) {
+        this.options[ key ] = options !== undefined && key in options
+            ? options[ key ]
+            : DEFAULT_OPTIONS[ key ];
+    }
 }
 
 /**
@@ -758,38 +758,38 @@ function Tannin( data, options ) {
  * @return {number} Plural form index.
  */
 Tannin.prototype.getPluralForm = function( domain, n ) {
-	var getPluralForm = this.pluralForms[ domain ],
-		config, plural, pf;
+    var getPluralForm = this.pluralForms[ domain ],
+        config, plural, pf;
 
-	if ( ! getPluralForm ) {
-		config = this.data[ domain ][ '' ];
+    if ( ! getPluralForm ) {
+        config = this.data[ domain ][ '' ];
 
-		pf = (
-			config[ 'Plural-Forms' ] ||
-			config[ 'plural-forms' ] ||
-			// Ignore reason: As known, there's no way to document the empty
-			// string property on a key to guarantee this as metadata.
-			// @ts-ignore
-			config.plural_forms
-		);
+        pf = (
+            config[ 'Plural-Forms' ] ||
+            config[ 'plural-forms' ] ||
+            // Ignore reason: As known, there's no way to document the empty
+            // string property on a key to guarantee this as metadata.
+            // @ts-ignore
+            config.plural_forms
+        );
 
-		if ( typeof pf !== 'function' ) {
-			plural = getPluralExpression(
-				config[ 'Plural-Forms' ] ||
-				config[ 'plural-forms' ] ||
-				// Ignore reason: As known, there's no way to document the empty
-				// string property on a key to guarantee this as metadata.
-				// @ts-ignore
-				config.plural_forms
-			);
+        if ( typeof pf !== 'function' ) {
+            plural = getPluralExpression(
+                config[ 'Plural-Forms' ] ||
+                config[ 'plural-forms' ] ||
+                // Ignore reason: As known, there's no way to document the empty
+                // string property on a key to guarantee this as metadata.
+                // @ts-ignore
+                config.plural_forms
+            );
 
-			pf = pluralForms( plural );
-		}
+            pf = pluralForms( plural );
+        }
 
-		getPluralForm = this.pluralForms[ domain ] = pf;
-	}
+        getPluralForm = this.pluralForms[ domain ] = pf;
+    }
 
-	return getPluralForm( n );
+    return getPluralForm( n );
 };
 
 /**
@@ -805,38 +805,38 @@ Tannin.prototype.getPluralForm = function( domain, n ) {
  * @return {string} Translated string.
  */
 Tannin.prototype.dcnpgettext = function( domain, context, singular, plural, n ) {
-	var index, key, entry;
+    var index, key, entry;
 
-	if ( n === undefined ) {
-		// Default to singular.
-		index = 0;
-	} else {
-		// Find index by evaluating plural form for value.
-		index = this.getPluralForm( domain, n );
-	}
+    if ( n === undefined ) {
+        // Default to singular.
+        index = 0;
+    } else {
+        // Find index by evaluating plural form for value.
+        index = this.getPluralForm( domain, n );
+    }
 
-	key = singular;
+    key = singular;
 
-	// If provided, context is prepended to key with delimiter.
-	if ( context ) {
-		key = context + this.options.contextDelimiter + singular;
-	}
+    // If provided, context is prepended to key with delimiter.
+    if ( context ) {
+        key = context + this.options.contextDelimiter + singular;
+    }
 
-	entry = this.data[ domain ][ key ];
+    entry = this.data[ domain ][ key ];
 
-	// Verify not only that entry exists, but that the intended index is within
-	// range and non-empty.
-	if ( entry && entry[ index ] ) {
-		return entry[ index ];
-	}
+    // Verify not only that entry exists, but that the intended index is within
+    // range and non-empty.
+    if ( entry && entry[ index ] ) {
+        return entry[ index ];
+    }
 
-	if ( this.options.onMissingKey ) {
-		this.options.onMissingKey( singular, domain );
-	}
+    if ( this.options.onMissingKey ) {
+        this.options.onMissingKey( singular, domain );
+    }
 
-	// If entry not found, fall back to singular vs. plural with zero index
-	// representing the singular value.
-	return index === 0 ? singular : plural;
+    // If entry not found, fall back to singular vs. plural with zero index
+    // representing the singular value.
+    return index === 0 ? singular : plural;
 };
 
 // EXTERNAL MODULE: ./node_modules/memize/index.js
@@ -1085,124 +1085,124 @@ function build_module_sprintf(format) {
  * @return {F & MemizeMemoizedFunction} Memoized function.
  */
 function memize( fn, options ) {
-	var size = 0;
+    var size = 0;
 
-	/** @type {?MemizeCacheNode|undefined} */
-	var head;
+    /** @type {?MemizeCacheNode|undefined} */
+    var head;
 
-	/** @type {?MemizeCacheNode|undefined} */
-	var tail;
+    /** @type {?MemizeCacheNode|undefined} */
+    var tail;
 
-	options = options || {};
+    options = options || {};
 
-	function memoized( /* ...args */ ) {
-		var node = head,
-			len = arguments.length,
-			args, i;
+    function memoized( /* ...args */ ) {
+        var node = head,
+            len = arguments.length,
+            args, i;
 
-		searchCache: while ( node ) {
-			// Perform a shallow equality test to confirm that whether the node
-			// under test is a candidate for the arguments passed. Two arrays
-			// are shallowly equal if their length matches and each entry is
-			// strictly equal between the two sets. Avoid abstracting to a
-			// function which could incur an arguments leaking deoptimization.
+        searchCache: while ( node ) {
+            // Perform a shallow equality test to confirm that whether the node
+            // under test is a candidate for the arguments passed. Two arrays
+            // are shallowly equal if their length matches and each entry is
+            // strictly equal between the two sets. Avoid abstracting to a
+            // function which could incur an arguments leaking deoptimization.
 
-			// Check whether node arguments match arguments length
-			if ( node.args.length !== arguments.length ) {
-				node = node.next;
-				continue;
-			}
+            // Check whether node arguments match arguments length
+            if ( node.args.length !== arguments.length ) {
+                node = node.next;
+                continue;
+            }
 
-			// Check whether node arguments match arguments values
-			for ( i = 0; i < len; i++ ) {
-				if ( node.args[ i ] !== arguments[ i ] ) {
-					node = node.next;
-					continue searchCache;
-				}
-			}
+            // Check whether node arguments match arguments values
+            for ( i = 0; i < len; i++ ) {
+                if ( node.args[ i ] !== arguments[ i ] ) {
+                    node = node.next;
+                    continue searchCache;
+                }
+            }
 
-			// At this point we can assume we've found a match
+            // At this point we can assume we've found a match
 
-			// Surface matched node to head if not already
-			if ( node !== head ) {
-				// As tail, shift to previous. Must only shift if not also
-				// head, since if both head and tail, there is no previous.
-				if ( node === tail ) {
-					tail = node.prev;
-				}
+            // Surface matched node to head if not already
+            if ( node !== head ) {
+                // As tail, shift to previous. Must only shift if not also
+                // head, since if both head and tail, there is no previous.
+                if ( node === tail ) {
+                    tail = node.prev;
+                }
 
-				// Adjust siblings to point to each other. If node was tail,
-				// this also handles new tail's empty `next` assignment.
-				/** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
-				if ( node.next ) {
-					node.next.prev = node.prev;
-				}
+                // Adjust siblings to point to each other. If node was tail,
+                // this also handles new tail's empty `next` assignment.
+                /** @type {MemizeCacheNode} */ ( node.prev ).next = node.next;
+                if ( node.next ) {
+                    node.next.prev = node.prev;
+                }
 
-				node.next = head;
-				node.prev = null;
-				/** @type {MemizeCacheNode} */ ( head ).prev = node;
-				head = node;
-			}
+                node.next = head;
+                node.prev = null;
+                /** @type {MemizeCacheNode} */ ( head ).prev = node;
+                head = node;
+            }
 
-			// Return immediately
-			return node.val;
-		}
+            // Return immediately
+            return node.val;
+        }
 
-		// No cached value found. Continue to insertion phase:
+        // No cached value found. Continue to insertion phase:
 
-		// Create a copy of arguments (avoid leaking deoptimization)
-		args = new Array( len );
-		for ( i = 0; i < len; i++ ) {
-			args[ i ] = arguments[ i ];
-		}
+        // Create a copy of arguments (avoid leaking deoptimization)
+        args = new Array( len );
+        for ( i = 0; i < len; i++ ) {
+            args[ i ] = arguments[ i ];
+        }
 
-		node = {
-			args: args,
+        node = {
+            args: args,
 
-			// Generate the result from original function
-			val: fn.apply( null, args ),
-		};
+            // Generate the result from original function
+            val: fn.apply( null, args ),
+        };
 
-		// Don't need to check whether node is already head, since it would
-		// have been returned above already if it was
+        // Don't need to check whether node is already head, since it would
+        // have been returned above already if it was
 
-		// Shift existing head down list
-		if ( head ) {
-			head.prev = node;
-			node.next = head;
-		} else {
-			// If no head, follows that there's no tail (at initial or reset)
-			tail = node;
-		}
+        // Shift existing head down list
+        if ( head ) {
+            head.prev = node;
+            node.next = head;
+        } else {
+            // If no head, follows that there's no tail (at initial or reset)
+            tail = node;
+        }
 
-		// Trim tail if we're reached max size and are pending cache insertion
-		if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
-			tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
-			/** @type {MemizeCacheNode} */ ( tail ).next = null;
-		} else {
-			size++;
-		}
+        // Trim tail if we're reached max size and are pending cache insertion
+        if ( size === /** @type {MemizeOptions} */ ( options ).maxSize ) {
+            tail = /** @type {MemizeCacheNode} */ ( tail ).prev;
+            /** @type {MemizeCacheNode} */ ( tail ).next = null;
+        } else {
+            size++;
+        }
 
-		head = node;
+        head = node;
 
-		return node.val;
-	}
+        return node.val;
+    }
 
-	memoized.clear = function() {
-		head = null;
-		tail = null;
-		size = 0;
-	};
+    memoized.clear = function() {
+        head = null;
+        tail = null;
+        size = 0;
+    };
 
-	if ( false ) {}
+    if ( false ) {}
 
-	// Ignore reason: There's not a clear solution to create an intersection of
-	// the function with additional properties, where the goal is to retain the
-	// function signature of the incoming argument and add control properties
-	// on the return value.
+    // Ignore reason: There's not a clear solution to create an intersection of
+    // the function with additional properties, where the goal is to retain the
+    // function signature of the incoming argument and add control properties
+    // on the return value.
 
-	// @ts-ignore
-	return memoized;
+    // @ts-ignore
+    return memoized;
 }
 
 module.exports = memize;

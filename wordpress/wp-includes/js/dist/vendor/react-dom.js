@@ -10,9 +10,9 @@
 'use strict';
 
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react')) :
-	typeof define === 'function' && define.amd ? define(['react'], factory) :
-	(global.ReactDOM = factory(global.React));
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react')) :
+    typeof define === 'function' && define.amd ? define(['react'], factory) :
+    (global.ReactDOM = factory(global.React));
 }(this, (function (React) { 'use strict';
 
 // Do not require this module directly! Use normal `invariant` calls with
@@ -12690,7 +12690,7 @@ var currentlyProcessingQueue = void 0;
 {
   didWarnUpdateInsideUpdate = false;
   currentlyProcessingQueue = null;
-  
+
 }
 
 function createUpdateQueue(baseState) {
@@ -16542,7 +16542,7 @@ function insertNonHydratedInstance(returnFiber, fiber) {
               didNotFindHydratableContainerTextInstance(parentContainer, text);
               break;
             case SuspenseComponent:
-              
+
               break;
           }
           break;
@@ -25339,7 +25339,7 @@ var foundDevTools = injectIntoDevTools({
 
 
 var ReactDOM$2 = Object.freeze({
-	default: ReactDOM
+    default: ReactDOM
 });
 
 var ReactDOM$3 = ( ReactDOM$2 && ReactDOM ) || ReactDOM$2;
