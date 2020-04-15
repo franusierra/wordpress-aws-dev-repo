@@ -6,7 +6,23 @@ We will use the latest wordpress and mysql versions.
 
 This repository is a "demo" repository for the development team to make changes over the application that will be deployed.
 
-## Requirements
+## Installation
+
+The repository provides a docker-compose file for developers. To use it you need to have docker and docker compose installed on your computer.
+
+* [Install docker](https://docs.docker.com/get-docker/)
+
+* [Install docker compose](https://docs.docker.com/compose/install/)
+
+## How to use
+
+You can launch the developer environment using the command:
+
+```bash
+docker-compose up
+```
+
+## Repository Goals
 
 The minimal requirements for this repository are:
 
