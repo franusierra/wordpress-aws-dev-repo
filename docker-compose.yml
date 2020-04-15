@@ -1,5 +1,7 @@
+---
 version: '3'
 services:
+
   wp:
     depends_on: [mysql]
     build: .
@@ -11,11 +13,11 @@ services:
       - ./wordpress:/var/www/html
 
   mysql:
-
-    image: "mysql:5.7"
+    image: "mysql:latest"
     environment:
       MYSQL_ROOT_PASSWORD: qwerty
     volumes:
       - database-wp-dev:/var/lib/mysql
+
 volumes:
   database-wp-dev:
