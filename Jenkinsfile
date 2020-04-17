@@ -21,7 +21,7 @@ pipeline
                 script
                 {
                     echo "Begin "+env.BRANCH_NAME+" build..."
-                    TAG = "${GIT_COMMIT[0..7]}"
+                    TAG = "${GIT_COMMIT[1..7]}"
                     docker.build("$IMAGE:$TAG",".")
                 }
             }
