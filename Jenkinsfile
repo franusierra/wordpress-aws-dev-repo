@@ -3,7 +3,7 @@ pipeline
     agent any
     environment
     {
-        IMAGE = 'wordpress-dev:'
+        IMAGE = 'wordpress-dev'
         ECRURL = '531104511012.dkr.ecr.eu-west-1.amazonaws.com/wordpress-dev'
     }
     stages
