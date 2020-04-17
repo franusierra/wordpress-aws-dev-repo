@@ -38,9 +38,9 @@ pipeline
                 {
                     echo "Begin "+env.BRANCH_NAME+" build..."
                     sh("eval \$(aws ecr get-login --region eu-west-1 --no-include-email)")
-                    sh("docker tag $IMAGE $ECRURL:staging-$TAG")
+                    sh("docker tag $IMAGE:$TAG $ECRURL:staging-$TAG")
                     docker.image("$ECRURL:staging-$TAG").push()
-                    sh("docker tag $IMAGE $ECRURL:staging-latest")
+                    sh("docker tag $IMAGE:$TAG $ECRURL:staging-latest")
                     docker.image("$ECRURL:staging-latest").push()
                 }
             }
@@ -56,9 +56,9 @@ pipeline
                 {
                     echo "Begin "+env.BRANCH_NAME+" build..."
                     sh("eval \$(aws ecr get-login --region eu-west-1 --no-include-email)")
-                    sh("docker tag $IMAGE $ECRURL:production-$TAG")
+                    sh("docker tag $IMAGE:$TAG $ECRURL:production-$TAG")
                     docker.image("$ECRURL:production-$TAG").push()
-                    sh("docker tag $IMAGE $ECRURL:production-latest")
+                    sh("docker tag $IMAGE:$TAG $ECRURL:production-latest")
                     docker.image("$ECRURL:production-latest").push()
                 }
             }
