@@ -26,7 +26,7 @@ pipeline
                 }
             }
         }
-        stage('Deploy staging')
+        stage('Push staging image')
         {
             when{
                 branch 'develop'
@@ -45,7 +45,27 @@ pipeline
                 }
             }
         }
-        stage('Deploy production')
+        stage('Run deployment staging job')
+        {
+            when{
+                branch 'develop'
+            }
+
+            steps
+            {
+                script
+                {
+                    echo "Running deployment staging job..."
+                    build job:'Wordpress-Ops/master',
+                        wait: false,
+                        parameters: [
+                            string(name: 'IMAGE',value: "$ECRURL:staging-$TAG"),
+                            string(name: 'ENVIRONMENT',value: "staging")
+                        ]
+                }
+            }
+        }
+        stage('Push production image')
         {
             when{
                 branch 'master'
@@ -60,6 +80,26 @@ pipeline
                     docker.image("$ECRURL:production-$TAG").push()
                     sh("docker tag $IMAGE:$TAG $ECRURL:production-latest")
                     docker.image("$ECRURL:production-latest").push()
+                }
+            }
+        }
+        stage('Run deployment production job')
+        {
+            when{
+                branch 'master'
+            }
+
+            steps
+            {
+                script
+                {
+                    echo "Running deployment production job..."
+                    build job:'Wordpress-Ops/master',
+                        wait: false,
+                        parameters: [
+                            string(name: 'IMAGE',value: "$ECRURL:production-$TAG"),
+                            string(name: 'ENVIRONMENT',value: "production")
+                        ]
                 }
             }
         }
